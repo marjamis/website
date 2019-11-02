@@ -1,3 +1,7 @@
 author: marjamis
 theme: jekyll-theme-hacker
 timezone: Australia/Sydney
+
+# Additional non-standard Github plugins
+plugin:
+  - jekyll-feed

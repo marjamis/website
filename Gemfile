@@ -12,4 +12,7 @@ group :jekyll_plugins do
   gem "jekyll-readme-index"
   gem "jekyll-titles-from-headings"
   gem "jekyll-relative-links"
+
+# Additional non-standard Github plugins
+  gem "jekyll-feed"
 end

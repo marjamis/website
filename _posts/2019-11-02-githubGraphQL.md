@@ -6,6 +6,8 @@ categories:
   - explanation
 ---
 
-```
-{% include githubGraphQL/query %}
-```
+Query:
+{% gist 2b0088ead7fcb6ea2ccfb196818b2be6 example_query %}
+
+Script:
+{% gist 2b0088ead7fcb6ea2ccfb196818b2be6 githubGraphQL.sh %}
