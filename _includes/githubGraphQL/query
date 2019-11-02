@@ -1,0 +1,23 @@
+{
+  "query": "query {
+    repository(owner:\"aws\", name:\"containers-roadmap\") {
+      issues(first:100, states:OPEN, labels:[\"EKS\"]) {
+        edges {
+          node {
+            createdAt
+            title
+            url
+            reactions(content:THUMBS_UP) {
+              thumbsUp: totalCount
+            }
+          }
+          cursor
+        }
+        pageInfo {
+          endCursor
+          hasNextPage
+        }
+      }
+    }
+  }"
+}
