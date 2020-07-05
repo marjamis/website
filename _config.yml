@@ -2,6 +2,15 @@ author: marjamis
 theme: jekyll-theme-hacker
 timezone: Australia/Sydney
 
+collections:
+  pages:
+    output: true
+  slides:
+    output: true
+
 # Additional non-standard Github plugins
 plugin:
   - jekyll-feed
+
+readme_index:
+  enabled: true

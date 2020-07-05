@@ -7,4 +7,18 @@
   {% endfor %}
 </ul>
 
-{% include_relative pages/about.md %}
+### Pages
+<ul>
+  {% for page in site.pages %}
+  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+  {% endfor %}
+</ul>
+
+### Slides
+<ul>
+  {% for page in site.slides %}
+  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+  {% endfor %}
+</ul>
+
+{% include_relative _pages/about.md %}
