@@ -11,7 +11,7 @@
 ### Post Categories
 <ul>
   {% for category in site.categories %}
-  <li><a href="{{ site.url }}/category/{{ category | first | url_encode }}/index.html">{{ category | first | capitalize }}</a></li>
+  <li><a href="{{ site.url }}/category/{{ category | first | url_encode }}.html">{{ category | first | capitalize }}</a></li>
   {% endfor %}
 </ul>
 
