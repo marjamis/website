@@ -31,4 +31,6 @@
 
 {% include_relative _pages/about.md %}
 
+---
+
 **Are all links working?** Why not check with [W3C Link Checker](https://validator.w3.org/checklink?uri=marjamis.github.io&hide_type=all&depth=&check=Check).
