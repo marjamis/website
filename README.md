@@ -29,7 +29,7 @@
   {% endfor %}
 </ul>
 
-{% include_relative _pages/about.md %}
+{% include about.md %}
 
 ---
 
