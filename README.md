@@ -2,11 +2,11 @@
 
 ### Core competencies
 
-| Languages | Platforms | Cloud |
-| --- | --- | --- |
-| Go | Kubernetes | AWS |
-| Python | ECS  | GCP |
-| Node | Containers | |
+| Programming Languages | Platforms | Cloud | Additional areas |
+| --- | --- | --- | --- |
+| Go | Kubernetes | AWS | DevOps, CI/CD, all the buzz words |
+| Python | ECS  | GCP | Security |
+| NodeJS | Containers | | Networking |
 
 ### Post Categories
 <ul>
