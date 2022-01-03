@@ -1,0 +1,23 @@
+name: Lighthouse
+
+on: [pull_request]
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - run: mkdir ${{ github.workspace }}/tmp/artifacts
+    
+    - name: Lighthouse
+      uses: foo-software/lighthouse-check-action@v7.1.0
+      with:
+        outputDirectory: ${{ github.workspace }}/tmp/artifacts
+        urls: 'https://marjamis.github.io'
+    
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v2.3.1
+      with:
+        name: Lighthouse reports
+        path: ${{ github.workspace }}/tmp/artifacts
