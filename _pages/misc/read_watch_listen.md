@@ -3,11 +3,9 @@ layout: default
 title: Read / Watch / Listen
 ---
 
-# Things I recommend to Read / Watch / Listen
+### Things I recommend to Read / Watch / Listen
 
 These are also worth revisting on a regular basis just to ensure the lessons available aren't buried in the day-to-day.
-
-## Topics
 
 ### Technology Leadership and Change
 
@@ -36,4 +34,5 @@ These are also worth revisting on a regular basis just to ensure the lessons ava
 ### Tools
 
 #### Git
+
 * [Git: How to unfuck](https://www.youtube.com/watch?v=LP4F2rmi4r4) - Useful for a whole list of commands and procedures when you're in a broken state
