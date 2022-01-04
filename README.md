@@ -1,6 +1,6 @@
-## Everything and anything...
+# Everything and anything...
 
-### Core competencies
+## Core competencies
 
 | Programming Languages | Platforms | Cloud | Additional areas |
 | --- | --- | --- | --- |
@@ -8,21 +8,24 @@
 | Python | ECS  | GCP | Security |
 | NodeJS | Containers | | Networking |
 
-### Post Categories
+## Post Categories
+
 <ul>
   {% for category in site.categories %}
   <li><a href="{{ site.url }}/category/{{ category | first | url_encode }}.html">{{ category | first | capitalize }}</a></li>
   {% endfor %}
 </ul>
 
-### Pages
+## Pages
+
 <ul>
   {% for page in site.pages %}
   <li><a href="{{ page.url }}">{{ page.title }}</a></li>
   {% endfor %}
 </ul>
 
-### Slides
+## Slides
+
 <ul>
   {% for page in site.slides %}
   <li><a href="{{ page.url }}">{{ page.title }}</a></li>
