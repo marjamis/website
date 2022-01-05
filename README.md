@@ -1,12 +1,13 @@
 # Everything and anything...
 
-## Core competencies
+## Core areas of focus
 
 | Programming Languages | Platforms | Cloud | Additional areas |
 | --- | --- | --- | --- |
 | Go | Kubernetes | AWS | DevOps, CI/CD, all the buzz words |
 | Python | ECS  | GCP | Security |
 | NodeJS | Containers | | Networking |
+| | | | Observability |
 
 ## Post Categories
 
@@ -18,11 +19,11 @@
 
 ## Pages
 
-<ul>
-  {% for page in site.pages %}
-  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-  {% endfor %}
-</ul>
+{% include page_dir_listing.md loc="documentation" %}
+
+{% include page_dir_listing.md loc="guides" %}
+
+{% include page_dir_listing.md loc="misc" %}
 
 ## Slides
 
