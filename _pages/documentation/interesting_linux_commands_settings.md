@@ -33,7 +33,6 @@ title: Interesting Linux Commands
 | mount --bind olddir newdir | Remount part of the file hierarchy somewhere else. Makes both locations access the same files undre the olddir and newdir. See bind mounts with df -aT|
 | curl -v -s -L -o /dev/null -w http_code="%{http_code}\n\  "time_namelookup="%{time_namelookup}\n\  "time_connect="%{time_connect}\n\   "time_pretransfer="%{time_pretransfer}\n\ "time_starttransfer="%{time_starttransfer}\n\  "num_connects="%{num_connects}\n\   "speed_download="%{speed_download}\n\  "speed_upload="%{speed_upload}\n\  "ssl_verify_results="%{ssl_verify_result}\n\  "time_total="%{time_total}\n" \<cloudfront URL\> | Get breakdown of time to transfer via Cloud Front |
 
-
 ### Settings
 
 | File | Setting | Use |
