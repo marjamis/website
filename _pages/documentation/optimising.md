@@ -1,11 +1,13 @@
 ---
 layout: default
-title: Thing to remember when looking for optimisations
+title: Optimising
 ---
 
-**Adapted from:** [AWS re:Invent 2014 | (WEB401) Optimizing Your Web Server on AWS](https://www.youtube.com/watch?v=ZfY0kwYiBRY)
+## {{ page.title }}
 
-## Important factors to think about
+### Important factors to think about
+
+**Adapted from:** [AWS re:Invent 2014 \| (WEB401) Optimizing Your Web Server on AWS](https://www.youtube.com/watch?v=ZfY0kwYiBRY)
 
 * Define what you optimising - tps, latency, cost, etc
 * Optimising is part of the application, when deploying have the optimisations applied with it

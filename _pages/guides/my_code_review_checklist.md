@@ -3,13 +3,13 @@ layout: default
 title: My Code Review Checklist
 ---
 
-# My Code Review Checklist
+## {{ page.title }}
 
-## Resources
+### Resources
 
 * [Stackoverflow: Why SOLID principles are still the foundation for modern software architecture](https://stackoverflow.blog/2021/11/01/why-solid-principles-are-still-the-foundation-for-modern-software-architecture/)
 
-## Checklist
+### Checklist
 
 These are designed for me to keep an eye on and ensure I remember a lot of these before generating a **CR (Code Review)** / **PR (Pull Request)** while ensuring I perform any required refactorings. Each item won't always be adhered to 100% of the time, as it depends on the specifics but is to be used as a guide.
 

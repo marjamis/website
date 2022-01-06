@@ -7,7 +7,9 @@ categories:
   - example
 ---
 
-## Create a LUKS encrypted partition
+## {{ page.title }}
+
+### Create a LUKS encrypted partition
 
 To create the luks volume on a block device:
 
@@ -15,7 +17,7 @@ To create the luks volume on a block device:
 cryptsetup luksFormat --cipher aes-xts-plain64 -v --key-size 512 --hash sha512 --iter-time 5000 --use-urandom --verify-passphrase <device>
 ```
 
-## Create a keyfile and add it to an existing device
+### Create a keyfile and add it to an existing device
 
 The below creates a 4096 bit key:
 
@@ -29,15 +31,15 @@ This will add the keyfile to the existing encrypted device:
 cryptsetup luksAddKey /dev/sda2 /etc/mykeyfile
 ```
 
-## Open the LUKS encrypted parition
+### Open the LUKS encrypted parition
 
-### One time
+#### One time
 
 ```bash
 cryptsetup luksOpen <encrypted_device> <mapper_name>
 ```
 
-### On boot via fstab
+#### On boot via fstab
 
 Once the disk has LUKS and a file system on it, to automate the mount you will need an entry in /etc/fstab such as:
 
@@ -51,7 +53,7 @@ and so there is no need for a password/key manually entered add the entry into /
 <mapper_name>         <device>       <password or preferred location to the key>
 ```
 
-### On boot via vmlinuz image(Used for / encrypted boots)
+#### On boot via vmlinuz image(Used for / encrypted boots)
 
 In grub.cfg for the linux line have:
 

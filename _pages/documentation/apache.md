@@ -3,9 +3,11 @@ layout: default
 title: Apache
 ---
 
-## Configuration
+## {{ page.title }}
 
-### Configure Apache to set headers with responses
+### Configuration
+
+#### Configure Apache to set headers with responses
 
 The below is an example of setting a header with text and the other setting the normally used Cache-Control header:
 
@@ -37,9 +39,9 @@ The available variables that can be used to return data are:
 * %{FOOBAR}e - The contents of the environment variable FOOBAR.
 * %{FOOBAR}s - The contents of the SSL environment variable FOOBAR, if mod_ssl is enabled.
 
-### Virtual Hosts
+#### Virtual Hosts
 
-#### IP Based
+##### IP Based
 
 You are able to specify multiple web pages which connect to the one host and separate which page to load based on the private/public IP address that is used. Example, this uses the private IP's which are associated with a physical or virtual interface:
 
@@ -57,7 +59,7 @@ ServerName www.example.org
 </VirtualHost> 
 ```
 
-#### Server Name Based
+##### Server Name Based
 
 You are able to specify multiple web pages which connect to the one host and separate which page to load based on the server name. Example:
 
@@ -76,7 +78,7 @@ ServerName www.example.org
 </VirtualHost>
 ```
 
-#### Name based for sub-domains
+##### Name based for sub-domains
 
 **NOTE:** This could be used specifying a mixture of options but for simplicity this is same IP and same port.
 

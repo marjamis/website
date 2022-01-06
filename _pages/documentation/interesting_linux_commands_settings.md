@@ -3,7 +3,7 @@ layout: default
 title: Interesting Linux Commands
 ---
 
-## Interesting Linux Commands
+## {{ page.title }}
 
 ### Command line
 

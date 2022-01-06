@@ -3,17 +3,17 @@ layout: default
 title: Bind
 ---
 
-## BIND
+## {{ page.title }}
 
 **NOTE:** The below examples are generally for both an Authoritative and Caching DNS Servers but with a little working can become Authoritative Only or Forwarding Only DNS Servers.
 
-## Tasks
+### Tasks
 
-### Installing and configuring
+#### Installing and configuring
 
 * Install BIND and bind-utils, such as with:
 
-### yum install bind bind-utils
+#### yum install bind bind-utils
 
 * Edit the /etc/named.conf file and add an ACL to a trusted list of instances, this will need to be updated on changes to IP's or additions of secondaries. An example of this ACL is:
 
@@ -46,14 +46,14 @@ title: Bind
 
 * In this additional configuration file that you have included add in the required zones/configurations. This is discussed later in this document.
 
-### Configure a new Zone
+#### Configure a new Zone
 
 * In a existing/new configuration file a Primary's configuration, create the listing of the forward and reverse zones you're creating. A sample of this configuration file is:
 
 ```bind
-  zone "test.marjamis.lab.myinstance.com" {
+  zone "test.marjamis.example.com" {
         type master; # Specifies this DNS Server is the Primary Authoritative for the zone
-        file "/etc/named/zones/db.test.marjamis.lab.myinstance.com"; # Location of the file zone db
+        file "/etc/named/zones/db.test.marjamis.example.com"; # Location of the file zone db
   };
   
   zone "31.172.in-addr.arpa" { # Network Octets in reverse order
@@ -108,7 +108,7 @@ named-checkzone <zone> <location of db file>
 
 * Assuming all these checks pass you can then reload/start the DNS server and check the RR's in place work.
 
-### Configure a Secondary DNS Server
+#### Configure a Secondary DNS Server
 
 * Install BIND on a second machine
 * Edit the /etc/named.conf on the Primary and configure the option allow-transfer to have the IP of the secondary DNS server. Such as:
@@ -121,9 +121,9 @@ allow-transfer { 172.31.33.14; };
 * Open this included configuration file and add in the zones that we've created on the primary but instead of being masters they will be listed as slaves. An example of this configuration is:
 
 ```bind
-zone "test.marjamis.lab.myinstance.com" {
+zone "test.marjamis.example.com" {
     type slave;
-    file "slaves/test.marjamis.lab.myinstance.com";
+    file "slaves/test.marjamis.example.com";
     masters { <IP_of_Primary>; };
 };
 
@@ -142,7 +142,7 @@ zone "31.172.in-addr.arpa" {
 
 * Now reload/restart BIND.
 
-### Updating DNS Records
+#### Updating DNS Records
 
 * Log into DNS server
 * Backup the current zone files as specified in the configuration file/s which can be found from the file:
@@ -156,7 +156,7 @@ zone "31.172.in-addr.arpa" {
 * Do the same for the reverse zones file/s.
 * Reload named.
 
-### Updating forwarders
+#### Updating forwarders
 
 * Backup the configuration files for named, the default being:
 
@@ -176,12 +176,12 @@ zone "31.172.in-addr.arpa" {
 * Reload named.
 * Test the new additions/deletions with dig.
 
-### Backout Plan
+#### Backout Plan
 
 * Restore the files you have backed up, update the serial number again so the change takes effect.
 * Reload named.
 
-### Reload named
+#### Reload named
 
 Examples are:
 
@@ -190,9 +190,9 @@ Examples are:
   Linux: # systemctl reload named
 ```
 
-## General Information
+### General Information
 
-### Configurations / Definitions
+#### Configurations / Definitions
 
 | Chroot and Setuid | BIND can run in a chrooted and limited user id for added security precautions. |
 | --- | --- |
@@ -218,7 +218,7 @@ Examples are:
 | Built-in Empty Zones | Named has some built-in empty zones (SOA and NS records only). These are for zones that should normally be answered locally and which queries should not be sent to the Internet's root servers. These general follow the normal non-routable IP ranges.|
 | Stub Zone | A stub zone is similar to a slave zone, except that it replicates only the NS records of a master zone instead of the entire zone. Stub zones are not a standard part of the DNS; they are a feature specific to the BIND implementation. |
 
-#### Types of DNS
+##### Types of DNS
 
 **NOTE:** For greater details on any configurations use official documentation.
 
@@ -230,7 +230,7 @@ Examples are:
 | Stub Resolver | The resolver libraries provided by most operating systems are stub resolvers, meaning that they are not capable of performing the full DNS resolution process by themselves by talking directly to the authoritative servers. Instead, they rely on a local name server to perform the resolution on their behalf. |  |
 | Split DNS | Setting up different views, or visibility, of the DNS space to internal and external resolvers is usually referred to as a Split DNS setup. There are several reasons an organization would want to set up its DNS this way. | Configurations of these views in ACL's or some other configuration.|
 
-### rndc operations
+#### rndc operations
 
 rndc is a BIND server control utility that allows to configure the run-time configurations of BIND. Many, if not all, of these will temporarily change how BIND operates but on a restart of the named process the defaults will be restored so permanent modifications requires updating the named configuration files.
 
@@ -240,20 +240,20 @@ rndc is a BIND server control utility that allows to configure the run-time conf
 | rndc dumpdb -cache | Will dump the cached addresses in the location specified in the named.conf file for the setting dump-file |
 | rndc reload | Will reload the named server it's connecting to, by default localhost. |
 
-### Other commands
+#### Other commands
 
 | Command | Function |
 | --- | --- |
 | named-compilezone | Similar to named-checkzone, but it always dumps the zone content to a specified file (typically in a different format). |
 | nsupdate | A utility to submit Dynamic DNS Updates to a name server. |
 
-### Files and their purpose
+#### Files and their purpose
 
 | File | Usage |
 | --- | --- |
 | /etc/rndc.key | A shared secret key used by the rndc to communicate with a remote name server. |
 
-## Useful links
+### Useful links
 
 * [Bind Documentation \- Version BIND 9.8](http://www.bind9.net/arm98.pdf)
 * [Zytrax DNS](http://www.zytrax.com/books/dns/)

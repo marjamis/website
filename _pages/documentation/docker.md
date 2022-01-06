@@ -3,11 +3,7 @@ layout: default
 title: General Docker Information
 ---
 
-## General Information
-
-### /etc/docker/daemon.json vs /etc/sysconfig/docker
-
-Only use one method but either should be able to configure options for the daemon. Doesn't appear that ENV's or proxy configurations can be set with daemon.json. Main difference appears to be JSON configuration compared to running them as command line arguments.
+## {{ page.title }}
 
 ### Docker PID 1 and Process Reaping
 

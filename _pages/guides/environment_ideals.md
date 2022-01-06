@@ -3,7 +3,7 @@ layout: default
 title: Environment Ideals
 ---
 
-## Environment Ideals
+## {{ page.title }}
 
 **Note:** Not all these are applicable for every size, use-case, etc. but should be thought of as some possible guidelines to follow or ignore depending on a variety of different factors.
 
@@ -29,6 +29,7 @@ title: Environment Ideals
   * Infrastructure Automation - Create your systems, OS configs, and app deployments as code.
   * Continuous Delivery - built, test, deploy your apps fast and in an automated manner.
   * Site Reliability Engineering - operate your system, monitor and orchestration but also designing for operability in the first place.
+* Outcomes over output basically ensure the metrics are driving the desired results rather than a metric that just says something happened. For example, feature releases are fine but what were there outcomes? Such a documented reduction in TOIL rather than we released 5 features. As usual, Martin Fowler is a good source of information surround this with [Outcome Over Output]( https://martinfowler.com/bliki/OutcomeOverOutput.html)
 
 #### CI/CD
 
@@ -58,3 +59,10 @@ title: Environment Ideals
 * [12 Factor Applications](https://12factor.net)
 * [Feature flags](https://martinfowler.com/articles/feature-toggles.html)
 * [API Versioning](https://cloudplatform.googleblog.com/2018/03/API-design-which-version-of-versioning-is-right-for-you.html)
+* [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+* [Friday Deploy Freezes Are Exactly Like Murdering Puppies](https://charity.wtf/2019/05/01/friday-deploy-freezes-are-exactly-like-murdering-puppies/) - A bit of a walkthrough of why and how to stop the concept, "It's Friday, Don't push to prod"
+
+### Code Reviews
+
+* [How to Make Good Code Reviews Better](https://stackoverflow.blog/2019/09/30/how-to-make-good-code-reviews-better/)
+* [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) - A specification for adding human and machine readable meaning to commit messages

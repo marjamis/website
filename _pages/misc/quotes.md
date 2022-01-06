@@ -3,7 +3,7 @@ layout: default
 title: Quotes
 ---
 
-## Quotes
+## {{ page.title }}
 
 > "Make everything as simple as possible, but not simpler" - **Albert Einstein**
 
