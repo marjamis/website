@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - run: mkdir ${{ github.workspace }}/tmp/artifacts
+    - run: mkdir -p ${{ github.workspace }}/tmp/artifacts
     
     - name: Lighthouse
       uses: foo-software/lighthouse-check-action@v7.1.0
