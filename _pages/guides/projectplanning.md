@@ -5,7 +5,7 @@ title: Project Planning
 
 ## {{ page.title }}
 
-**Note:** Always incorporate [Design Thinking](https://www.education.nsw.gov.au/teaching-and-learning/curriculum/key-learning-areas/stem/early-stage-1-to-stage-3/project-based-learning-and-design-thinking/phases-of-design-thinking) into the process.
+**Note:** Always incorporate [Design Thinking](https://education.nsw.gov.au/teaching-and-learning/curriculum/key-learning-areas/stem/early-stage-1-to-stage-3/project-based-learning-and-design-thinking/phases-of-design-thinking) into the process.
 
 ### Project Management Phases
 

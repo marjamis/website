@@ -255,5 +255,4 @@ rndc is a BIND server control utility that allows to configure the run-time conf
 
 ### Useful links
 
-* [Bind Documentation \- Version BIND 9.8](http://www.bind9.net/arm98.pdf)
 * [Zytrax DNS](http://www.zytrax.com/books/dns/)
