@@ -34,3 +34,11 @@ title: Quotes
 ---
 
 > "If I had more time, I would have written a shorter letter." -- Unknown attribution. More details can be found at [Quote Investigator](https://quoteinvestigator.com/2012/04/28/shorter-letter/).
+
+---
+
+> “Fill your bowl to the brim and it will spill.
+> Keep sharpening your knife and it will blunt.
+> Chase after money and security and your heart will never unclench.
+> Care about people's approval and you will be their prisoner.
+> Do your work, then step back. The only path to serenity.” - **Lao Tzu**
