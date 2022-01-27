@@ -30,3 +30,11 @@ title: Quotes
 ---
 
 > (1) understand the problem and barriers to progress; (2) develop technology and related process and workflow changes; (3) evaluate and generate evidence of impact; (4) implement and disseminate technology and related ix process and workflow changes; and (5) create incentives that promote the use of technology and related process and workflow changes. - **[Identifying and Coordinating Care for Complex Patients](https://www.rand.org/content/dam/rand/pubs/research_reports/RR1200/RR1234/RAND_RR1234.pdf)**
+
+---
+
+> “Fill your bowl to the brim and it will spill.
+> Keep sharpening your knife and it will blunt.
+> Chase after money and security and your heart will never unclench.
+> Care about people's approval and you will be their prisoner.
+> Do your work, then step back. The only path to serenity.” - **Lao Tzu**
