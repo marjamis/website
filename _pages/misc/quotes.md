@@ -30,3 +30,7 @@ title: Quotes
 ---
 
 > (1) understand the problem and barriers to progress; (2) develop technology and related process and workflow changes; (3) evaluate and generate evidence of impact; (4) implement and disseminate technology and related ix process and workflow changes; and (5) create incentives that promote the use of technology and related process and workflow changes. - **[Identifying and Coordinating Care for Complex Patients](https://www.rand.org/content/dam/rand/pubs/research_reports/RR1200/RR1234/RAND_RR1234.pdf)**
+
+---
+
+> "If I had more time, I would have written a shorter letter." -- Unknown attribution. More details can be found at [Quote Investigator](https://quoteinvestigator.com/2012/04/28/shorter-letter/).
