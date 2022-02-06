@@ -252,7 +252,3 @@ rndc is a BIND server control utility that allows to configure the run-time conf
 | File | Usage |
 | --- | --- |
 | /etc/rndc.key | A shared secret key used by the rndc to communicate with a remote name server. |
-
-### Useful links
-
-* [Zytrax DNS](http://www.zytrax.com/books/dns/)
