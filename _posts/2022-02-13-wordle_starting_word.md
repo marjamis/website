@@ -5,7 +5,7 @@ categories:
   - random
 ---
 
-Wordle has taken the world by storm but are you wondering what your first starting word should be without coming up with the "optimial" word. How about:
+Wordle has taken the world by storm but are you wondering what your first starting word should be without coming up with the "optimal" word. How about:
 
 {% gist d1434147ff1c821218fb53f1f7206174 wordle-starting-word.txt %}
 

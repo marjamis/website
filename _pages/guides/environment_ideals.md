@@ -24,6 +24,7 @@ title: Environment Ideals
 
 #### General
 
+* [Accelerate] by Nicole Forsgren, Jez Humble, Gene Kim - A great breakdown of the importance of DevOps and what specific actions/tooling/etc correlate with better, safer, and faster deployments. I can't stress how much I love this and that it breaks down how the research was conducted
 * ROI on my own thing, calculated based of usage/time/etc for a digestible value
 * Most common areas of DevOps:
   * Infrastructure Automation - Create your systems, OS configs, and app deployments as code.
@@ -44,6 +45,9 @@ title: Environment Ideals
 
 ### SRE
 
+* [Google's SRE Books](https://sre.google/books/) - As expected these are good sources of information and practices. Definitely worth a read on a regular basis
+  * [The Site Reliability Workbook](https://sre.google/workbook/table-of-contents/)
+  * [Site Reliability Engineering](https://sre.google/sre-book/table-of-contents/)
 * Tracking of the reliability of a system, such as with:
   * SLI - Quantative measurements
   * SLO - binding targets that an SLI can be out of expected band - TODO function to work out the error budge based off of this from somwhere rather than typing it out. monitoring the SLI, with a graph/metric for compliance to the SLO and the remainder being the ErrorBudget. Dependency error budgets
@@ -61,6 +65,9 @@ title: Environment Ideals
 * [API Versioning](https://cloudplatform.googleblog.com/2018/03/API-design-which-version-of-versioning-is-right-for-you.html)
 * [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
 * [Friday Deploy Freezes Are Exactly Like Murdering Puppies](https://charity.wtf/2019/05/01/friday-deploy-freezes-are-exactly-like-murdering-puppies/) - A bit of a walkthrough of why and how to stop the concept, "It's Friday, Don't push to prod"
+* Build security principles in early to avoid costly rework. Shifting left on security is important in the long run. How exactly? That's a good question. Some good base fundamentals to know are:
+  * Threat Assessment
+  * https://owasp.org/Top10/
 
 ### Code Reviews
 
