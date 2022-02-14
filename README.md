@@ -6,10 +6,21 @@
 | --- | --- | --- | --- |
 | Go | Kubernetes | AWS | DevOps, CI/CD, all the buzz words |
 | Python | ECS  | GCP | Security |
-| NodeJS | Containers | | Networking |
+| Javascript | Containers | | Networking |
 | | | | Observability |
 
-## Post Categories
+## Posts
+
+### Last 10 Posts (most recent first)
+
+<ol>
+  {% for post in site.posts offset: 0 limit: 10 %}
+  <li>{{ post.date}} - <a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ol>
+
+
+### Categories
 
 <ul>
   {% for category in site.categories %}
