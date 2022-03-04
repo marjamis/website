@@ -63,3 +63,5 @@ Some specific blog posts that I have latched onto are:
 ### Misc
 
 * [Internet Routing and Traffic Engineering](https://aws.amazon.com/blogs/architecture/internet-routing-and-traffic-engineering/)
+* [What I learned from 100 days of rejection](https://www.ted.com/talks/jia_jiang_what_i_learned_from_100_days_of_rejection)
+* [Wat](https://www.destroyallsoftware.com/talks/wat)
