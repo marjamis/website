@@ -26,6 +26,7 @@ Some specific blog posts that I have latched onto are:
 * [The change-maker’s guide to pitching your project idea](https://www.atlassian.com/blog/productivity/how-to-pitch-project-ideas-at-work)
 * [Why a successful digital transformation is more about people than tech](https://www.atlassian.com/blog/teamwork/successful-digital-transformation-people)
 * [Alpha brain waves are associated with a flow state of mind. Here’s how to ride yours](https://www.atlassian.com/blog/productivity/alpha-brain-waves-are-associated-with-a-flow-state-of-mind-heres-how-to-ride-yours)
+* [Do your team a favor and start delegating more](https://www.atlassian.com/blog/leadership/how-to-delegate)
 
 ### Technology Leadership and Change
 

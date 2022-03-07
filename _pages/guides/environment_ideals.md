@@ -31,7 +31,8 @@ title: Environment Ideals
   * Continuous Delivery - built, test, deploy your apps fast and in an automated manner.
   * Site Reliability Engineering - operate your system, monitor and orchestration but also designing for operability in the first place.
 * Outcomes over output basically ensure the metrics are driving the desired results rather than a metric that just says something happened. For example, feature releases are fine but what were there outcomes? Such a documented reduction in TOIL rather than we released 5 features. As usual, Martin Fowler is a good source of information surround this with [Outcome Over Output]( https://martinfowler.com/bliki/OutcomeOverOutput.html)
-
+* [When issues do occur, how do you correct them? COE's](https://aws.amazon.com/blogs/mt/why-you-should-develop-a-correction-of-error-coe/)
+* [Howie: The Post Incident Guide](https://www.jeli.io/howie-the-post-incident-guide/)
 #### CI/CD
 
 ##### How to rollout changes
@@ -57,6 +58,7 @@ title: Environment Ideals
 * DiRT Disaster Recovery Testing events and Game days - Perhaps should be done in testing accounts to ensure these things are tested for on occasion? More information:
   * [Weathering the Unexpected](http://queue.acm.org/detail.cfm?id=2371516)
 * [Chaos Engineering](http://principlesofchaos.org/) - Chaos in production system, such as with Netflix's Chaos Monkey/Kong/etc, to ensure even during failures the system is resilient
+* [LinkedIn - School of SRE](https://linkedin.github.io/school-of-sre/) - A high level plan to understand some of the areas that are apart of being an SRE
 
 ### Creating Applications
 
