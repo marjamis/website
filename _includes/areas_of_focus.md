@@ -4,5 +4,5 @@
 | --- | --- | --- | --- |
 | Go | Kubernetes | AWS | DevOps, CI/CD, all the buzz words |
 | Python | ECS  | GCP | Security |
-| Javascript | Containers | | Networking |
-| | | | Observability |
+| Javascript | EKS | | Networking |
+| | Containers | | Observability |
