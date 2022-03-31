@@ -50,10 +50,6 @@ title: Cloud Computing Ideals
 
 ## Useful Resources
 
-### Documentation
-
-* [Cloud Patterns](http://en.clouddesignpattern.org/index.php/Main_Page)
-
 ### Videos
 
 * [AWS Summit Series 2016 \| Chicago - Another Day, Another Billion Packets](https://www.youtube.com/watch?v=yZtKcZdsCJk) - Useful as it makes me remap the broadstrokes of how VPC works. Also look for updates as there are new versions all the time
