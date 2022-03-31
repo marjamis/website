@@ -39,4 +39,6 @@
 
 ---
 
-**Are all links working?** Why not check with [W3C Link Checker](https://validator.w3.org/checklink?uri=marjamis.github.io&hide_type=all&depth=&check=Check).
+**Are all links working?** [![Check Links](https://github.com/marjamis/marjamis.github.io/actions/workflows/links.yml/badge.svg)](https://github.com/marjamis/marjamis.github.io/actions/workflows/links.yml)
+
+Why not also check with [W3C Link Checker](https://validator.w3.org/checklink?uri=marjamis.github.io&hide_type=all&depth=&check=Check).
