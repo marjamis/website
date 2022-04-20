@@ -1,8 +1,18 @@
 # Everything and anything...
 
-## Posts
+---
 
-### Last 10 Posts (most recent first)
+{% include about.md %}
+
+---
+
+## How does it all fit together?
+
+With everything become more complex, entangled but also separate, how do we link all these concepts together? I probably don't really know but [this is my attempt](./pages/how_does_it_all_fit_together/).
+
+---
+
+## Last 10 Posts (most recent first)
 
 <ol>
   {% for post in site.posts offset: 0 limit: 10 %}
@@ -10,32 +20,17 @@
   {% endfor %}
 </ol>
 
+### All posts (by category)
+{% assign sorted_categories = site.categories | sort %}
+{% for category in sorted_categories %}
+<a href="{{ site.url }}/category/{{ category | first | url_encode }}.html">{{ category | first | capitalize }}</a>
+{%- endfor %}
 
-### Categories
+### All pages
 
-<ul>
-  {% for category in site.categories %}
-  <li><a href="{{ site.url }}/category/{{ category | first | url_encode }}.html">{{ category | first | capitalize }}</a></li>
-  {% endfor %}
-</ul>
+{% include list_directory.md loc="documentation" %}
 
-## Pages
-
-{% include page_dir_listing.md loc="documentation" %}
-
-{% include page_dir_listing.md loc="guides" %}
-
-{% include page_dir_listing.md loc="misc" %}
-
-## Slides
-
-<ul>
-  {% for page in site.slides %}
-  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-  {% endfor %}
-</ul>
-
-{% include about.md %}
+{% include list_directory.md loc="misc" %}
 
 ---
 

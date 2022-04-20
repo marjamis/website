@@ -1,7 +1,8 @@
-### {{ include.loc | capitalize  }}
+#### {{ include.loc | capitalize  }}
 
 <ul>
-  {% for page in site.pages %}
+  {% assign sorted_pages = site.pages | sort: 'title' %}
+  {% for page in sorted_pages %}
     {% if page.path contains include.loc %}
   <li><a href="{{ page.url }}">{{ page.title }}</a></li>
     {% endif %}

@@ -1,8 +1,8 @@
 ---
-categories:
-  - slides
 layout: slides
 title: Test Slides based on official examples
+categories:
+  - slides
 ---
 
 ## Just some basic test slides

@@ -8,7 +8,8 @@ layout: default
       Topic: {{ page.category-name | capitalize }}
     </h1>
     <div class="posts">
-      {% for post in site.categories[page.category-name] %}
+      {% assign sorted_category = site.categories[page.category-name] | sort %}
+      {% for post in sorted_category %}
         <p class="post-meta">
         {% if site.date_format %}
             {{ post.date | date: site.date_format }}
