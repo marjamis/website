@@ -3,6 +3,8 @@ layout: default
 title: How does it all fits together?
 ---
 
+<h1>{{page.title}}</h1>
+
 This is my guide to how everything in IT (or at least the parts I'm involved in) fit together. There are a lot, and I mean A LOT, of technologies, practices, thoughts, etc. that come together to make up what is an IT system. There are:
 
 * the applications which run the software

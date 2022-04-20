@@ -2,7 +2,14 @@
 
 ---
 
-{% include about.md %}
+## Introduction
+
+A place for me to try to explain things I've learnt or as a wrapper to other bits of code, such as in gists. While I strive for accuracy in all things I can't guarantee this so please take with a grain of salt and don't hesitate to create PR's for things you know are wrong.
+
+To find out more about who I am, you can visit my:
+
+* [LinkedIn](https://www.linkedin.com/in/jamismarch/) for a bit more about me and my work
+* [GitHub Profile](https://github.com/marjamis/) to see my current projects and code bases
 
 ---
 
@@ -26,14 +33,6 @@ With everything become more complex, entangled but also separate, how do we link
 <a href="{{ site.url }}/category/{{ category | first | url_encode }}.html">{{ category | first | capitalize }}</a>
 {%- endfor %}
 
-### All pages
-
-{% include list_directory.md loc="documentation" %}
-
-{% include list_directory.md loc="misc" %}
-
 ---
 
-**Are all links working?** [![Check Links](https://github.com/marjamis/marjamis.github.io/actions/workflows/links.yml/badge.svg)](https://github.com/marjamis/marjamis.github.io/actions/workflows/links.yml)
-
-Why not also check with [W3C Link Checker](https://validator.w3.org/checklink?uri=marjamis.github.io&hide_type=all&depth=&check=Check).
+**Are all links working?** [![Check Links](https://github.com/marjamis/marjamis.github.io/actions/workflows/links.yml/badge.svg)](https://github.com/marjamis/marjamis.github.io/actions/workflows/links.yml) or check with [W3C Link Checker](https://validator.w3.org/checklink?uri=marjamis.github.io&hide_type=all&depth=&check=Check).
