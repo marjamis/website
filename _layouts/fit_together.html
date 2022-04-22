@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<hr/>
+
+<h1>Content</h1>
+
+{% include list_directory_files.md %}
+
+<hr/>
+
+<h1>Posts for {{ page.category }}</h1>
+
+{% include list_posts.md %}

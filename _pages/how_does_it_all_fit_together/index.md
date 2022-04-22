@@ -22,20 +22,24 @@ Unfortunately, or fortunately as that's where some of the fun comes in, this is 
 My current breakdown is:
 
 ## Application
+
 * [Programming Concepts](./programming-concepts/)
 * [Programming](./programming/) - language specific information. Primarily for go and python with a bit of javascript in the mix
 * [Code Management](./code-management/)
 
 ## Infrastructure
+
 * [Containers](./containers/) - both the linux side (cgroups, namespaces, docker, etc) and orchestartors (primarily ECS and EKS/Kubernetes)
 * [Cloud](./cloud) - Mainly AWS but GCP is bound to make a showing
 * [Observability](./observability/)
 
 ## Philosophies and their implementations
+
 * [DevOps](./devops/) - this include practices, like CI/CD, and specific technologies
 * [SRE](./sre/) practices
 
 ## Hearts and minds
+
 * [Technology Leadership and Change](./tech-leadership-change/)
 * [Growth and Mental Health](./growth-mental-health/) - this is important but easily overlooked and is worthwhile to check-in with yourself every so often
 
