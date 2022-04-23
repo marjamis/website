@@ -7,7 +7,7 @@ title: The IT industry, how does it all fit together?
 
 This is my attempt to find a way to convey the types of information I'm passionate about while also having them useful to the greater context of how a complex IT system operates. There are a lot of technologies, practices, thoughts, etc. that come together to make up what is an IT system and it can become quite messy and hopefully this will help provide a basis for being able to continue to learn and apply these to real world systems. Some examples of the areas that will have coverage are:
 
-* applications that run our business functions - It's all well and good to have a great people but if there aren't any customers, you don't have much
+* applications that run our business functions - It's all well and good to have great people but if there aren't any customers, you don't have much
 * the programming languages used to create the applications
 * the deployment processes to get the applications on to the servers and running
 * the physical/virtual servers that exist to run the applications
