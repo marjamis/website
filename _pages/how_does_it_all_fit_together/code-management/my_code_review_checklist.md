@@ -1,0 +1,17 @@
+---
+layout: default
+title: My Code Review Checklist
+---
+
+# {{ page.title }}
+
+This is designed so I can refactor my code before generating a **CR (Code Review)** / **PR (Pull Request)**. Each item won't be adhered to 100% of the time, as it depends on the specifics, but I find it a useful checklist to keep in mind.
+
+| Based on... | Item | Meaning... |
+| --- | --- | --- |
+| SOLID | Each module should do one thing and do it well. | |
+| SOLID | Software entities should be open for extension, but closed for modification. | |
+| SOLID | If S is a subtype of T, then objects of type T may be replaced with objects of type S without altering any of the desirable properties of the program. | |
+| SOLID | Many client-specific interfaces are better than one general-purpose interface. | |
+| SOLID | Depend upon abstractions, not concretions. | Use interfaces rather than relying on concrete classes. For example, rather than using S3 clients directly use an interface so S3 can be switched at any point without changing my code. |
+| Commit messaging | Commits should follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) | Allows my commits (may require rebasing) to be easier to understand and continue consistency. |

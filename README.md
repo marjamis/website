@@ -37,7 +37,7 @@ With the IT industry becoming more complex, entangled together but also being ve
 ### All posts (by category)
 {% assign sorted_categories = site.categories | sort %}
 {% for category in sorted_categories %}
-<a href="{{ site.url }}/category/{{ category | first | url_encode }}.html">{{ category | first | capitalize }}</a>
+<a href="{{ site.url }}/category/{{ category | first | url_encode }}.html">{{ category | first | replace: "-", " " | capitalize }}</a>
 {%- endfor %}
 
 ---
