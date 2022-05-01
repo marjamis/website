@@ -3,7 +3,6 @@ title: Using Github's GraphQL
 date: 2019-11-02 20:15:10 +11:00
 categories:
   - example
-  - explanation
 ---
 
 Here is an example of how to make authenticated GitHub GraphQL queries to obtain information with a basic loop for paginated results. This is only a reference for simple requirements and anything more advanced probably **shouldn't** be a bash script.

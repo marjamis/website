@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<h1>{{ page.title }}</h1>
+
+{{ content }}
+
+<hr/>
+
+<h2>Content</h2>
+
+{% include list_directory_files.md %}
+
+<hr/>
+
+<h2>Posts for category: {{ page.category }}</h2>
+
+{% include list_posts.md %}
+
+<hr/>
+
+{% if page.resources %}
+<h2>Resources</h2>
+<ul>
+{% for resource in page.resources %}
+<li>{% if resource.link %}<a href={{resource.link}}>{{resource.title}}</a>{% else %}{{resource.title}}{% endif %}{% if resource.description %} - {{resource.description}}{% endif %}</li>
+{% endfor %}
+</ul>
+{% endif %}

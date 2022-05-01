@@ -27,7 +27,7 @@ title: Cloud Computing Ideals
 
 ### AWS' General Principles for working in the cloud
 
-**Adapted from:** AWS Principles
+**From:** AWS Principles
 
 * Design for failure and nothing fails
 * Loose coupling sets you free
@@ -47,10 +47,3 @@ title: Cloud Computing Ideals
 * Cloudfront in front of services for obfuscation
 * Web Application Firewall(WAF) filters application layer and can rate limit for your application
 * Cloud Watch network and other metrics to determine DDoS. What is normal usage? This will need monitoring of the environment over time to determine trends and when things are abnormal.
-
-## Useful Resources
-
-### Videos
-
-* [AWS Summit Series 2016 \| Chicago - Another Day, Another Billion Packets](https://www.youtube.com/watch?v=yZtKcZdsCJk) - Useful as it makes me remap the broadstrokes of how VPC works. Also look for updates as there are new versions all the time
-* [AWS May 2016 Webinar Series - Strategies to Optimize Costs Using AWS](https://www.youtube.com/watch?v=slJvH85fl00) - Useful for information about keeping costs of using AWS down.
