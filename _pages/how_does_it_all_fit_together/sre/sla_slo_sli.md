@@ -1,9 +1,14 @@
 ---
-layout: default
+layout: resources
 title: SLA, SLO, and SLI's
+resources:
+  - title: |
+      Are your SLOs realistic? How to analyze your risks like an SRE
+    link: https://cloud.google.com/blog/products/devops-sre/how-sres-analyze-risks-to-evaluate-slos
+  - title: |
+      Setting SLOs: a step-by-step guide
+    link: https://cloud.google.com/blog/products/management-tools/practical-guide-to-setting-slos
 ---
-
-# {{page.title}}
 
 To be able to say your service is reliable the first thing that you need to be able to do is quantify what reliable is for your service and a way to measure.
 
