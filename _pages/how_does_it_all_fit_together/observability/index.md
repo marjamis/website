@@ -11,6 +11,10 @@ A good way that people have started to describe this as is:
 
 > Monitoring is for known issues, such as error rates, where observability is to provide details about the unknown, such as a portion of the application not acting as expected that needs investigation.
 
+## Summary of points from Rollbar
+
+Rather than trying to make up my own thoughts on this, especially so early in my observability thinking, I've summaried my key take-aways from Rollbar's [Achieving Observability in Complex Modern Applications](https://www.slideshare.net/jatap/achieving-observabilityinmodernapplications). Overtime I will modify this to make it my own but this is a very good start on how to think about the observability practice.
+
 ### Requirements for achieving effective Observability
 
 * Full-Stack Error Tracking
