@@ -27,7 +27,8 @@ This is a guide I use, there will be changes, when I'm starting a new project an
 
 #### 2 - Plan
 
-* Get buy-in from your stakeholders, without this you have no place to go
+* Get buy-in from your stakeholders, without this you have no place to go.
+  * With this in mind it's important to ensure that you frame your plan and it's reason to exist uniquely for each of the stakeholder type. This is an  important step to convince them why they should care, and potentially even help, with your plan and goals.
 * Define aggressive timelines, dates, and milestones for completion of the project. These should of course be reasonable and take into account some time for slack but main reason for aggressive is to ensure it's in people minds and not some adhoc project that can be thought about later (again depends on the specifics of the project)
 * Create metrics. This enables you to see the current state and progress of changes you project makes during and after completion. Define:
   * what are your leading and lag metrics?
