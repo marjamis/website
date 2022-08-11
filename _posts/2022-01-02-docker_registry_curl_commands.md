@@ -1,6 +1,6 @@
 ---
 title: How to get docker registry/repository information with curl
-date: 2022-01-02 19:47:14 +11:00
+date: 2022-01-02 19:47:14 +1100
 categories:
   - docker
   - example

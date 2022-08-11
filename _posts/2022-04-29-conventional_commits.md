@@ -1,6 +1,6 @@
 ---
 title: Using Conventional Commits to write better commit messages
-date: 2022-04-29 19:52:40 +11:00
+date: 2022-04-29 19:52:40 +1100
 categories:
   - code-management
 ---

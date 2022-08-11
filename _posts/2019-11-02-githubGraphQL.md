@@ -1,6 +1,6 @@
 ---
 title: Using Github's GraphQL
-date: 2019-11-02 20:15:10 +11:00
+date: 2019-11-02 20:15:10 +1100
 categories:
   - example
 ---

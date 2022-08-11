@@ -1,6 +1,6 @@
 ---
 title: Wordle - How about trying this starting word?
-date: 2022-02-13 21:01:50 +11:00
+date: 2022-02-13 21:01:50 +1100
 categories:
   - random
 ---
