@@ -19,14 +19,15 @@ function error {
 }
 
 function action_new_post {
+    date=$(date "+%Y-%m-%d %H:%M:%S %z")
     title=$(gum input --prompt "Title of post? ")
 
     gum style "Select one or more categories that you would like the post to be apart of: "
     selected_categories=$(gum choose --no-limit $(ls -1 ./category | sed 's:.md::g'))
     formatted_categories=$(for i in $selected_categories; do echo "  - $i"; done)
 
-    date=$(date "+%Y-%m-%d %H:%M:%S %z")
-    filename="$(date "+%Y-%m-%d")-$(echo $title | sed 's: :\_:g' | tr 'A-Z' 'a-z')"
+    filename_title=$(gum confirm "Use the title as the filename?" && echo "$title" || gum input --prompt "What should the file name be? ")
+    filename="$(echo $date | cut -f1 -d\ )-$(echo $filename_title | sed 's: :\_:g' | tr 'A-Z' 'a-z')"
 
     printf "\nCreating new post...\n"
     echo "---

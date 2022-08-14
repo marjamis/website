@@ -1,5 +1,6 @@
 {
     "conventionalCommits.scopes": [
-        "fit_together"
+        "fit_together",
+        "helper"
     ]
 }
