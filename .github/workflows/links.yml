@@ -21,8 +21,9 @@ jobs:
         id: date
         run: echo "::set-output name=now::$(date +'%d-%m-%Y')"
         
-      - name: Create issue when fail
-        uses: peter-evans/create-issue-from-file@v2
+      - name: Create Issue From File
+        uses: peter-evans/create-issue-from-file@v4.0.0
+
         with:
           title: Automated Links Checker Report for ${{ steps.date.outputs.now }}
           content-filepath: ./lychee/out.md
