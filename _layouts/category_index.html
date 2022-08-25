@@ -4,27 +4,27 @@ layout: default
 ---
 
 <div class="categories">
-    <h1 class="h1 category-title">
-      Topic: {{ page.category-name | capitalize }}
-    </h1>
-    <div class="posts">
-      {% assign sorted_category = site.categories[page.category-name] | sort %}
-      {% for post in sorted_category %}
-        <p class="post-meta">
-        {% if site.date_format %}
-            {{ post.date | date: site.date_format }}
-        {% else %}
-            {{ post.date | date: "%b %-d, %Y" }}
-        {% endif %}
-        </p>
-          <a href="{{ post.url | relative_url }}" class="post-link">
-            <h3 class="h1 post-title">
-              {{ post.title }}
-            </h3>
-          </a>
-          <span class="post-excerpt">
-              {{ post.excerpt }}
-          </span>
-        {% endfor %}
-    </div>
+  <h1 class="h1 category-title">
+    Topic: {{ page.category-name | capitalize }}
+  </h1>
+  <div class="posts">
+    {% assign sorted_category = site.categories[page.category-name] | sort:date | reverse %}
+    {% for post in sorted_category %}
+    <p class="post-meta">
+      {% if site.date_format %}
+      {{ post.date | date: site.date_format }}
+      {% else %}
+      {{ post.date | date: "%b %-d, %Y" }}
+      {% endif %}
+    </p>
+    <a href="{{ post.url | relative_url }}" class="post-link">
+      <h3 class="h1 post-title">
+        {{ post.title }}
+      </h3>
+    </a>
+    <span class="post-excerpt">
+      {{ post.excerpt }}
+    </span>
+    {% endfor %}
+  </div>
 </div>
