@@ -3,6 +3,10 @@ layout: fit_together
 title: Tech Leadership and Change
 category: tech-leadership-change
 location: how_does_it_all_fit_together/tech-leadership-change
+resources:
+- title: Agile Product Ownership in a Nutshell
+  link: https://www.youtube.com/watch?v=502ILHjX9EE
+  description: This is basically a 1 day product ownership course compressed into 15 minute animated presentation. There's obviously more to product ownership than this, so see this is a high level summary.
 ---
 
 An amazingly large part of the IT industry is change. Just think about what IT looked like 5 years ago? 10 years ago? 20 years ago? There just really isn't much comparison to the extent of change that has happened in the IT industry over the decades. As a result of this, people have been often left out of the equation which has caused multiple issues, such as burnout and continuation of bad practices.
