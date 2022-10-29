@@ -1,57 +1,56 @@
 <html>
-  <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/css/reveal.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/css/theme/white.css" id="theme">
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/js/reveal.js"></script>
-  </head>
 
-  <body>
-    <div class="reveal">
-      <h4 style="text-align: center;">{{ page.title }}</h4>
-      <div class="slides">
-        <section data-markdown
-         data-separator="<hr />"
-         data-separator-vertical="^\r?\n---\r?\n$"
-         data-notes="^Note:">
-          <script type="text/template">
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/css/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/css/theme/white.css" id="theme">
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/js/reveal.js"></script>
+</head>
+
+<body>
+  <div class="reveal">
+    <h4 style="text-align: center;">{{ page.title }}</h4>
+    <div class="slides">
+      <section data-markdown data-separator="<hr />" data-separator-vertical="^\r?\n---\r?\n$" data-notes="^Note:">
+        <script type="text/template">
             {{ content }}
           </script>
-        </section>
-      </div>
+      </section>
     </div>
+  </div>
 
 
-    <script>
-      var revealCDN = "https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/";
-      Reveal.initialize({
-        controls: true,
-        controlsTutorial: false,
-        controlsLayout: 'bottom-right',
-        controlsBackArrows: 'faded',
-        progress: true,
-        slideNumber: true,
-        hash: true,
-        center: true,
-        fragments: true,
-        fragmentInURL: true,
-        help: true,
-        // defaultTiming: 120,
-        // totalTime: 600,
-        // minimumTimePerSlide: 10,
-        // viewDistance: 3,
-        transistion: 'slide',
-        progress: true,
-        showNotes: false,
-        markdown: {
-      		smartypants: true
-      	},
-        dependencies: [
-          { src: `${revealCDN}plugin/markdown/marked.js`, condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: `${revealCDN}plugin/markdown/markdown.js`, condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: `${revealCDN}plugin/highlight/highlight.js`, async: true, },
-          // { src: `${revealCDN}notes/notes.js`, async: true },
-        ],
-      });
-    </script>
-  </body>
+  <script>
+    var revealCDN = "https://cdn.jsdelivr.net/npm/reveal.js@3.9.2/";
+    Reveal.initialize({
+      controls: true,
+      controlsTutorial: false,
+      controlsLayout: 'bottom-right',
+      controlsBackArrows: 'faded',
+      progress: true,
+      slideNumber: true,
+      hash: true,
+      center: true,
+      fragments: true,
+      fragmentInURL: true,
+      help: true,
+      // defaultTiming: 120,
+      // totalTime: 600,
+      // minimumTimePerSlide: 10,
+      // viewDistance: 3,
+      transistion: 'slide',
+      progress: true,
+      showNotes: false,
+      markdown: {
+        smartypants: true
+      },
+      dependencies: [
+        { src: `${revealCDN}plugin/markdown/marked.js`, condition: function () { return !!document.querySelector('[data-markdown]'); } },
+        { src: `${revealCDN}plugin/markdown/markdown.js`, condition: function () { return !!document.querySelector('[data-markdown]'); } },
+        { src: `${revealCDN}plugin/highlight/highlight.js`, async: true, },
+        // { src: `${revealCDN}notes/notes.js`, async: true },
+      ],
+    });
+  </script>
+</body>
+
 </html>
