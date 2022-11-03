@@ -8,9 +8,11 @@ categories:
 
 The AWS Pricing API is pretty different from the average AWS API but once I got a handle on what it was doing it makes a lot of sense to be able to get pricing data in this way. Let me break it down a bit using the AWS CLI.
 
-Let's imagine we want the pricing of EKS Clusters in the SYD region, ap-southeast-2. The first bit of information we need to get is what is the service code for the EKS service. The service code being the name used for a serice in the pricing API. To get a full list of all the services, and their services codes, you can use the pricing:DescribeServices API call without any flags. This will return a list of all services with their available attributes (more on this a bit later).
+Let's imagine we want the pricing of EKS Clusters in the SYD region, ap-southeast-2. The first bit of information we need to get is what is the service code for the EKS service. The service code being the name used for a service in the pricing API. To get a full list of all the services, and their services codes, you can use the pricing:DescribeServices API call without any flags. This will return a list of all services with their available attributes (more on this a bit later).
 
-As an example let's get a list of all the services codes and grep out EKS:
+Before we go to heavily into the specifics, it's important to know that the pricing API isn't available in every region, it's only available in us-east-1 and ap-south-1, at least at the time of writing. This means all the below API calls will need to be made against one of these regions,  otherwise the calls will fail.
+
+With that out of the way, lets dig in. To start let's get a list of all the services codes and grep out EKS:
 
 ```bash
 aws pricing describe-services | jq '.Services[].ServiceCode' | grep -i EKS
