@@ -3,7 +3,7 @@
 COMMAND_LINE_OPTIONS_HELP="Jekyll Post Helper"
 
 function help {
-    echo "Usage: helper n -h for help";
+    echo "Usage: helper -h for help";
     echo "$COMMAND_LINE_OPTIONS_HELP"
 }
 
