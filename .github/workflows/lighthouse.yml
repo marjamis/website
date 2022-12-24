@@ -6,28 +6,28 @@ jobs:
   lighthouse:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - run: mkdir -p ${{ github.workspace }}/tmp/artifacts
-    
-    - name: Lighthouse
-      uses: foo-software/lighthouse-check-action@v8.0.2
-      id: lighthouseCheck
-      with:
-        outputDirectory: ${{ github.workspace }}/tmp/artifacts
-        urls: 'https://marjamis.github.io'
-    
-    - name: Upload artifacts
-      uses: actions/upload-artifact@v2.3.1
-      with:
-        name: Lighthouse reports
-        path: ${{ github.workspace }}/tmp/artifacts
-        
-    - name: Verify Lighthouse Check results
-      uses: foo-software/lighthouse-check-status-action@master
-      with:
-        lighthouseCheckResults: ${{ steps.lighthouseCheck.outputs.lighthouseCheckResults }}
-        minAccessibilityScore: "98"
-        minBestPracticesScore: "98"
-        minPerformanceScore: "98"
-        minSeoScore: "98"
+      - run: mkdir -p ${{ github.workspace }}/tmp/artifacts
+
+      - name: Lighthouse
+        uses: foo-software/lighthouse-check-action@v8.0.2
+        id: lighthouseCheck
+        with:
+          outputDirectory: ${{ github.workspace }}/tmp/artifacts
+          urls: "https://marjamis.github.io"
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2.3.1
+        with:
+          name: Lighthouse reports
+          path: ${{ github.workspace }}/tmp/artifacts
+
+      - name: Verify Lighthouse Check results
+        uses: foo-software/lighthouse-check-status-action@master
+        with:
+          lighthouseCheckResults: ${{ steps.lighthouseCheck.outputs.lighthouseCheckResults }}
+          minAccessibilityScore: "90"
+          minBestPracticesScore: "90"
+          minPerformanceScore: "90"
+          minSeoScore: "90"
