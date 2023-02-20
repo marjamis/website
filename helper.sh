@@ -21,6 +21,8 @@ function error {
 function action_new_post {
     date=$(date "+%Y-%m-%d %H:%M:%S %z")
     title=$(gum input --prompt "Title of post? ")
+    # Deletes special characters as lychee doesn't like bash expandandable values in URLs
+    title=$(echo $title | tr -d '{}()')
 
     gum style "Select one or more categories that you would like the post to be apart of: "
     selected_categories=$(gum choose --no-limit $(ls -1 ./category | sed 's:.md::g'))
