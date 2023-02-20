@@ -27,7 +27,7 @@ jobs:
           path: ${{ github.workspace }}/tmp/artifacts
 
       - name: Verify Lighthouse Check results
-        uses: foo-software/lighthouse-check-status-action@v9.1.1
+        uses: foo-software/lighthouse-check-status-action@v2.0.1
         with:
           lighthouseCheckResults: ${{ steps.lighthouseCheck.outputs.lighthouseCheckResults }}
           minAccessibilityScore: "90"
