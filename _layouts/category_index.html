@@ -8,8 +8,8 @@ layout: default
     Category: {{ page.title }}
   </h1>
   <div class="posts">
-    {% assign sorted_category = site.categories[page.title] | sort:date | reverse %}
-    {% for post in sorted_category %}
+    {% assign sorted_category = site.categories[page.title] %}
+    {% for post in sorted_category | sort:date | reverse %}
     <p class="post-meta">
       {% if site.date_format %}
       {{ post.date | date: site.date_format }}
