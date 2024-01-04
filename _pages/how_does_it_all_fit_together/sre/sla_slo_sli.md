@@ -8,6 +8,9 @@ resources:
   - title: |
       Setting SLOs: a step-by-step guide
     link: https://cloud.google.com/blog/products/management-tools/practical-guide-to-setting-slos
+  - title: |
+      Availability Table: Keep in mind when creating SLI's, SLO's, and SLA's
+    link: https://sre.google/sre-book/availability-table/
 ---
 
 To be able to say your service is reliable the first thing that you need to be able to do is quantify what reliable is for your service and a way to measure.
