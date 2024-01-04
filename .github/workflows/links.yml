@@ -5,7 +5,7 @@ on:
     - cron: "0 9 * * 1"
   push:
     branches:
-      - master
+      - main
 
 jobs:
   linkChecker:
