@@ -1,5 +1,5 @@
 ---
 layout: category_index
-category-name: example
+title: example
 permalink: "/category/example"
 ---

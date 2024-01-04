@@ -1,5 +1,5 @@
 ---
 layout: category_index
-category-name: docker
+title: docker
 permalink: "/category/docker"
 ---

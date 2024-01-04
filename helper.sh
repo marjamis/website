@@ -42,17 +42,17 @@ $formatted_categories
 }
 
 function action_new_category {
-    category_name=$(gum input --prompt "New category name? ")
-    printf "$category_name\n"
+    title=$(gum input --prompt "New category name/title? ")
+    printf "$title\n"
 
-    printf "Creating category for $category_name...\n"
+    printf "Creating category for $title...\n"
     echo "---
 layout: category_index
-category-name: $category_name
-permalink: \"/category/$category_name\"
+title: $title
+permalink: \"/category/$title\"
 ---
 
-" > ./category/$category_name.md
+" > ./category/$title.md
 }
 
 # Start of script execution

@@ -19,12 +19,11 @@ To find out more about who I am, you can visit my:
 
 ## The IT industry, how does it all fit together?
 
-With the IT industry becoming more complex, entangled together but also being very diverse, how do we link all these thoughts and techniques together in a successful result? [This is my attempt](./pages/how_does_it_all_fit_together/) to work through this for myself and hopefully others will find it useful as well.
+With the IT industry becoming more complex, entangled together but also being very diverse, how do we link all these thoughts and techniques together for a successful result? [This is my attempt](./pages/how_does_it_all_fit_together/) to work through this for myself and hopefully others will find it useful as well.
 
 ---
 <p></p>
 ---
-
 
 ## Last 10 Posts (most recent first)
 
@@ -34,11 +33,19 @@ With the IT industry becoming more complex, entangled together but also being ve
   {% endfor %}
 </ol>
 
-### All posts (by category)
+### Post Categories
 {% assign sorted_categories = site.categories | sort %}
 {% for category in sorted_categories %}
-<a href="{{ site.url }}/category/{{ category | first | url_encode }}.html">{{ category | first | replace: "-", " " | capitalize }}</a>
+<a href="{{ site.url }}/category/{{ category | first | url_encode }}.html">{{ category | first }}</a>
 {%- endfor %}
+
+---
+<p></p>
+---
+
+## Misc. Pages
+
+- [Advent of Code Learnings](./pages/advent_of_code_lessons/)
 
 ---
 <p></p>

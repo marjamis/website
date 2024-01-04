@@ -1,5 +1,5 @@
 ---
 layout: category_index
-category-name: random
+title: random
 permalink: "/category/random"
 ---

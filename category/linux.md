@@ -1,5 +1,5 @@
 ---
 layout: category_index
-category-name: linux
+title: linux
 permalink: "/category/linux"
 ---

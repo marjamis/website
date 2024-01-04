@@ -1,5 +1,5 @@
 ---
 layout: category_index
-category-name: aws
+title: aws
 permalink: "/category/aws"
 ---
