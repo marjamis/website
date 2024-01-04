@@ -45,7 +45,7 @@ With the IT industry becoming more complex, entangled together but also being ve
 
 ## Misc. Pages
 
-- [Advent of Code Learnings](./pages/advent_of_code_lessons/)
+- [Advent of Code Lessons](./pages/advent_of_code_lessons/)
 
 ---
 <p></p>
