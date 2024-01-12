@@ -4,14 +4,18 @@ import "../styles/global.css";
 const { resources } = Astro.props;
 ---
 
-<h4>Resources</h4>
-
-<ul>
-  {
-    resources?.map((resource) => (
-      <li>
-        <a href={resource.link}>{resource.title}</a> - {resource.description}
-      </li>
-    ))
-  }
-</ul>
+{
+  resources && (
+    <>
+      <h4>Resources</h4>
+      <ul>
+        {resources.map((resource) => (
+          <li>
+            <a href={resource.link}>{resource.title}</a> -{" "}
+            {resource.description}
+          </li>
+        ))}
+      </ul>
+    </>
+  )
+}
