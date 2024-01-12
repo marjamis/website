@@ -1,0 +1,17 @@
+---
+import "../styles/global.css";
+
+const { pages } = Astro.props;
+---
+
+<h4>Pages</h4>
+
+<ul>
+  {
+    pages.map((page) => (
+      <li>
+        <a href={`/fit_together/${page.slug}`}>{page.data.title}</a>
+      </li>
+    ))
+  }
+</ul>

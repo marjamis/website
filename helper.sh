@@ -1,6 +1,7 @@
 #!/bin/bash -e
 
-COMMAND_LINE_OPTIONS_HELP="Jekyll Post Helper"
+COMMAND_LINE_OPTIONS_HELP="Astro Post Helper"
+NEW_POST="New Post"
 
 function help {
     echo "Usage: helper -h for help";
@@ -38,21 +39,7 @@ date: $date
 categories:
 $formatted_categories
 ---
-" > ./_posts/$filename.md
-}
-
-function action_new_category {
-    category_name=$(gum input --prompt "New category name? ")
-    printf "$category_name\n"
-
-    printf "Creating category for $category_name...\n"
-    echo "---
-layout: category_index
-category-name: $category_name
-permalink: \"/category/$category_name\"
----
-
-" > ./category/$category_name.md
+" > ./src/content/posts/$filename.md
 }
 
 # Start of script execution
@@ -62,14 +49,12 @@ if [ ! $(command -v gum) ] ; then
     error "Gum is not installed. Please refer to the documentation: https://github.com/charmbracelet/gum" 1 "no"
 fi
 
-LIST="New Post
-New Category"
+LIST="$NEW_POST"
 
 ACTION=$(echo -e "$LIST" | gum choose)
 
 case "$ACTION" in
-    "New Post") action_new_post ;;
-    "New Category") action_new_category ;;
+    "$NEW_POST") action_new_post ;;
     \?) error "E_OPTERROR_UNKNOWNOPTION" 2 ;;
     *) error "E_OPTERROR_NOOPTION" 3 ;;
 esac

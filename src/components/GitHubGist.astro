@@ -1,0 +1,41 @@
+---
+// Import the global.css file here so that it is included on
+// all pages through the use of the <BaseHead /> component.
+import "../styles/global.css";
+
+interface Props {
+  id: string;
+  file: string;
+}
+
+const { id, file } = Astro.props;
+
+// const ns = {
+//   //injects client js file
+//   require: async (u) => {
+//     await new Promise((res, rej) => {
+//       fetch(u)
+//         .then((r) => (r.ok ? r.blob() : rej))
+//         .then((b) => {
+//           let ou = URL.createObjectURL(b),
+//             el = document.createElement("script");
+//           el.setAttribute("src", ou);
+//           el.setAttribute("type", "text/javascript");
+//           el.onload = () => res();
+//           document.body.appendChild(el);
+//         })
+//         .catch((e) => rej);
+//     });
+//   },
+// };
+
+// await ns.require(`https://gist.github.com/marjamis/${id}.js?file=${file}`);
+---
+
+<code>
+  {id}
+
+  <br />
+
+  {file}
+</code>

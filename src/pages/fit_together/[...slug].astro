@@ -1,0 +1,30 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import Resources from "../../components/Resources.astro";
+import Index from "../../components/PageIndexList.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("fit_together");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+type Props = CollectionEntry<"fit_together">;
+
+const post = Astro.props;
+const { Content } = await post.render();
+
+const category = post.slug.split("/", 1);
+
+const pages = await getCollection("fit_together", ({ id, slug }) => {
+  return id.startsWith(`${category}/`);
+});
+---
+
+<Base {...post.data}>
+  <Content />
+  <Index pages={pages} />
+  <Resources resources={post.data.resources} />
+</Base>
