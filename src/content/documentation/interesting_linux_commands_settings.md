@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Interesting Linux Commands
 ---
 

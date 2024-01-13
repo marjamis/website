@@ -16,8 +16,8 @@ command:
 
 test: ## Builds and then runs tests against the application
 
-prod: ## Runs the prod version of the application
-	$(MAKE) command OPTIONS="-p 8080"
+build: ## Builds the site for production
+	npx astro build
 
 dev: ## Runs a dev version of the application
 	$(MAKE) command

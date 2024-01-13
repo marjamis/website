@@ -1,5 +1,4 @@
 ---
-layout: slides
 title: Test Slides based on official examples
 categories:
   - slides
