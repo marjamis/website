@@ -1,7 +1,7 @@
 ---
 title: Navigating the AWS Pricing API with the AWS CLI
-description: PENDING
-publishDate: 2022-08-14 21:59:16 +1000
+description: The AWS Pricing API is pretty different from the average AWS API but once I got a handle on what it was doing it makes a lot of sense to be able to get pricing data in this way. Let me break it down a bit using the AWS CLI.
+publishedDate: 2022-08-14 21:59:16 +1000
 heroImage: "/blog-placeholder-2.jpg"
 
 categories:

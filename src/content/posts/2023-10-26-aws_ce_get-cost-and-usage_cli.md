@@ -1,7 +1,7 @@
 ---
 title: Navigating the AWS Cost Explorer (GetCostAndUsage) API with the AWS CLI
-description: PENDING
-publishDate: 2023-10-26 13:38:29 +1100
+description: The AWS Cost Explorer API is great for getting information about your AWS spend and what's is causing that spend.
+publishedDate: 2023-10-26 13:38:29 +1100
 heroImage: "/blog-placeholder-3.jpg"
 
 categories:

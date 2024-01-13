@@ -9,7 +9,8 @@ import type { CollectionEntry } from "astro:content";
 
 type Props = CollectionEntry<"posts">["data"];
 
-const { title, description, publishDate, updatedDate, heroImage } = Astro.props;
+const { title, description, publishedDate, updatedDate, heroImage } =
+  Astro.props;
 ---
 
 <html lang="en">
@@ -70,7 +71,7 @@ const { title, description, publishDate, updatedDate, heroImage } = Astro.props;
         <div class="prose">
           <div class="title">
             <div class="date">
-              <FormattedDate date={publishDate} />
+              <FormattedDate date={publishedDate} />
               {
                 updatedDate && (
                   <div class="last-updated-on">
