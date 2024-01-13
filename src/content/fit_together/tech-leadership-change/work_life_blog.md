@@ -2,8 +2,6 @@
 title: Atlassian's Work Life  Blog Posts
 ---
 
-## {{page.title}}
-
 Special callout to Atlassian for their [Work Life Blog](https://www.atlassian.com/blog) which has a good set of information on a variety of areas. Very good source to review and search for topics as required.
 
 Some specific blog posts that I have latched onto are:

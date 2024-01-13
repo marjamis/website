@@ -2,8 +2,6 @@
 title: Cloud Computing Ideals
 ---
 
-## {{ page.title }}
-
 ### Individual Tidbits
 
 **Adapted from:** [AWS tips I wish I'd known before I started](https://wblinks.com/notes/aws-tips-i-wish-id-known-before-i-started)

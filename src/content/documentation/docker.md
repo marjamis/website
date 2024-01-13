@@ -3,8 +3,6 @@ layout: default
 title: General Docker Information
 ---
 
-## {{ page.title }}
-
 ### Docker PID 1 and Process Reaping
 
 **Adapted from:** [Docker and the PID 1 Zombie Reaping Problem](https://blog.phusion.nl/2015/01/20/docker-and-the-pid-1-zombie-reaping-problem/)
@@ -25,13 +23,13 @@ This is where a PID 1 process within a container which can reap is important. Th
 
 **More information:**
 
-* [Overlay2 UserGuide](https://docs.docker.com/engine/userguide/storagedriver/overlayfs-driver)
+- [Overlay2 UserGuide](https://docs.docker.com/engine/userguide/storagedriver/overlayfs-driver)
 
 #### General
 
-* Filesystem based where devicemapper is block based
-* To view the mounts which exist when you use the overlay storage driver with Docker, use the mount command. The output below is truncated for readability.
-* As overlay2 is file based if you want the overlay2 data on a different disk you will need to provision as normal and then mount to:
+- Filesystem based where devicemapper is block based
+- To view the mounts which exist when you use the overlay storage driver with Docker, use the mount command. The output below is truncated for readability.
+- As overlay2 is file based if you want the overlay2 data on a different disk you will need to provision as normal and then mount to:
   /var/lib/docker/overlay2
 
 OverlayFS layers two directories on a single Linux host and presents them as a single directory. These directories are called layers and the unification process is referred to as a union mount. OverlayFS refers to the lower directory as lowerdir and the upper directory a upperdir. The unified view is exposed through its own directory called merged.
@@ -72,12 +70,12 @@ Renaming directories: Calling rename(2) for a directory is allowed only when bot
 
 #### Benefits
 
-* Page Caching. OverlayFS supports page cache sharing. Multiple containers accessing the same file share a single page cache entry for that file. This is good for minimising memory usage.
-* copy_up. As with AUFS, OverlayFS has to perform copy-up operations whenever a container writes to a file for the first time. This can add latency into the write operation, especially for large files. However, once the file has been copied up, all subsequent writes to that file occur in the upper layer, without the need for further copy-up operations.
+- Page Caching. OverlayFS supports page cache sharing. Multiple containers accessing the same file share a single page cache entry for that file. This is good for minimising memory usage.
+- copy_up. As with AUFS, OverlayFS has to perform copy-up operations whenever a container writes to a file for the first time. This can add latency into the write operation, especially for large files. However, once the file has been copied up, all subsequent writes to that file occur in the upper layer, without the need for further copy-up operations.
 
 #### Limitations
 
 To summarize the OverlayFS’s aspect which is incompatible with other filesystems:
 
-* open(2): OverlayFS only implements a subset of the POSIX standards. This can result in certain OverlayFS operations breaking POSIX standards. One such operation is the copy-up operation where this can lead the file being used being a lower layer than it should be. Commonly an issue with yum requiring the yum-plugin-ovl package for yum to work with overlay2.
-* rename(2): OverlayFS does not fully support the rename(2) system call. Your application needs to detect its failure and fall back to a “copy and unlink” strategy.
+- open(2): OverlayFS only implements a subset of the POSIX standards. This can result in certain OverlayFS operations breaking POSIX standards. One such operation is the copy-up operation where this can lead the file being used being a lower layer than it should be. Commonly an issue with yum requiring the yum-plugin-ovl package for yum to work with overlay2.
+- rename(2): OverlayFS does not fully support the rename(2) system call. Your application needs to detect its failure and fall back to a “copy and unlink” strategy.
