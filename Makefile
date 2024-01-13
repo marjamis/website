@@ -10,16 +10,13 @@ helper: # Adapted from: https://marmelab.com/blog/2016/02/29/auto-documented-mak
 	@echo "Available targets..." # @ will not output shell command part to stdout that Makefiles normally do but will execute and display the output.
 	@grep -hE '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-command:
-	echo "Application run: $(OPTIONS)"
-	npx astro dev
-
 test: ## Builds and then runs tests against the application
 
-build: ## Builds the site for production
-	npx astro build
-
 dev: ## Runs a dev version of the application
-	$(MAKE) command
+	npx astro dev
+
+prod: ## Builds the site for production and uses that as the local webserver source
+	npx astro build
+	npx astro preview
 
 clean: ## Cleans up any old/unneeded items
