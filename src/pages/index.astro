@@ -2,25 +2,75 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+import { Content } from "../../README.md";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      main {
+        width: calc(100% - 2em);
+        max-width: 100%;
+        margin: 0;
+      }
+      .hero-image {
+        width: 100%;
+      }
+      .hero-image img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 12px;
+        box-shadow: var(--box-shadow);
+      }
+      .prose {
+        width: 720px;
+        max-width: calc(100% - 2em);
+        margin: auto;
+        padding: 1em;
+        color: rgb(var(--gray-dark));
+      }
+      .title {
+        margin-bottom: 1em;
+        padding: 1em 0;
+        text-align: center;
+        line-height: 1;
+      }
+      .title h1 {
+        margin: 0 0 0.5em 0;
+      }
+      .date {
+        margin-bottom: 0.5em;
+        color: rgb(var(--gray));
+      }
+      .last-updated-on {
+        font-style: italic;
+      }
+    </style>
   </head>
   <body>
     <Header title={SITE_TITLE} />
     <main>
-      <h1>Everything and anything...</h1>
-      <h2>Introduction</h2>
-       A place for me to try to explain things I've learnt or as a wrapper to
-      other bits of code, such as in GitHub gists. While I strive for accuracy
-      in all things I can't guarantee this so please take with a grain of salt
-      and don't hesitate to create PR's for things you know are wrong. To find
-      out more about who I am, you can visit my social links in the
-      headers/footers.
+      <article>
+        <div class="hero-image">
+          <img
+            width={1020}
+            height={510}
+            src="/blog-placeholder-about.jpg"
+            alt=""
+          />
+        </div>
+        <div class="prose">
+          <div class="title">
+            <hr />
+          </div>
+          <Content />
+        </div>
+      </article>
     </main>
     <Footer />
   </body>
