@@ -4,7 +4,7 @@ description: The AWS Pricing API is pretty different from the average AWS API bu
 publishedDate: 2022-08-14 21:59:16 +1000
 heroImage: "/blog-placeholder-2.jpg"
 
-categories:
+tags:
   - aws
   - example
 ---

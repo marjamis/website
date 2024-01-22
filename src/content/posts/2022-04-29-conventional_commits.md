@@ -4,7 +4,7 @@ description: Commit messages are important as they should outline what was chang
 publishedDate: 2022-04-29 19:52:40 +1100
 heroImage: "/blog-placeholder-3.jpg"
 
-categories:
+tags:
   - code-management
 ---
 

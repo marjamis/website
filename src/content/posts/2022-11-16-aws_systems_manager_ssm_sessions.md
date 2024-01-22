@@ -4,7 +4,7 @@ description: The basics of AWS Systems Manager (SSM) Sessions with Linux.
 publishedDate: 2022-11-16 18:34:04 +1100
 heroImage: "/blog-placeholder-3.jpg"
 
-categories:
+tags:
   - aws
   - example
 ---

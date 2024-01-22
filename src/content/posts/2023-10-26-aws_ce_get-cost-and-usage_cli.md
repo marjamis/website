@@ -4,7 +4,7 @@ description: The AWS Cost Explorer API is great for getting information about yo
 publishedDate: 2023-10-26 13:38:29 +1100
 heroImage: "/blog-placeholder-3.jpg"
 
-categories:
+tags:
   - aws
   - example
 ---

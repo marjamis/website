@@ -4,7 +4,7 @@ description: The basics of LUKS
 publishedDate: 2022-09-24 16:15:43 +1000
 heroImage: "/blog-placeholder-5.jpg"
 
-categories:
+tags:
   - example
   - linux
 ---
