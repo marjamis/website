@@ -1,0 +1,85 @@
+---
+import Layout from "./Base.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+
+import type { CollectionEntry } from "astro:content";
+
+type Props = CollectionEntry<"posts">["data"];
+
+const { title, description, publishedDate, updatedDate, heroImage } =
+  Astro.props;
+---
+
+<style is:global>
+  main {
+    width: 960px;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  ul li {
+    width: calc(50% - 1rem);
+  }
+  ul li * {
+    text-decoration: none;
+    transition: 0.2s ease;
+  }
+  ul li img {
+    margin-bottom: 0.5rem;
+    border-radius: 12px;
+  }
+  ul li a {
+    display: block;
+  }
+  .title {
+    margin: 0;
+    color: rgb(var(--black));
+    line-height: 1;
+  }
+  .date {
+    margin: 0;
+    color: rgb(var(--gray));
+  }
+  ul li a:hover h4,
+  ul li a:hover .date {
+    color: rgb(var(--accent));
+  }
+  ul a:hover img {
+    box-shadow: var(--box-shadow);
+  }
+  @media (max-width: 720px) {
+    ul {
+      gap: 0.5em;
+    }
+    ul li {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
+
+<Layout title={title} heroImage={heroImage}>
+  <div class="prose">
+    <div class="title">
+      {
+        publishedDate && (
+          <div class="date">
+            <FormattedDate date={publishedDate} />
+            {updatedDate && (
+              <div class="last-updated-on">
+                Last updated on <FormattedDate date={updatedDate} />
+              </div>
+            )}
+          </div>
+        )
+      }
+      <hr />
+    </div>
+    <slot />
+  </div>
+</Layout>

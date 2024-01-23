@@ -1,13 +1,15 @@
 ---
-import Layout from "../layouts/Post.astro";
+import Layout from "../layouts/Base.astro";
 ---
 
-<Layout
-  title="About Me"
-  description="Lorem ipsum dolor sit amet"
-  publishedDate={new Date("Jan 8 2024")}
-  heroImage="/blog-placeholder-about.jpg"
->
-  To find out more about who I am, you can visit my social links in the
-  headers/footers.
+<Layout title="About Me" heroImage="/blog-placeholder-about.jpg">
+  <article>
+    <div class="prose">
+      <div class="title">
+        <hr />
+      </div>
+       To find out more about who I am, you can visit my social links in the
+      headers/footers.
+    </div>
+  </article>
 </Layout>

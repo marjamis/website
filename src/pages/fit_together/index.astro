@@ -1,13 +1,18 @@
 ---
-import Layout from "../../layouts/Post.astro";
-import { Content as IndexContent } from "../../content/fit_together/index.md";
+import Layout from "../../layouts/Base.astro";
+import Content from "../../content/fit_together/index.md";
 ---
 
 <Layout
   title="The IT industry, how does it all fit together?"
-  description="This is my attempt to find a way to convey the types of information I’m passionate about while also having them useful to the greater context of how a complex IT system operates."
-  publishedDate={new Date("Jan 11 2024")}
   heroImage="/blog-placeholder-about.jpg"
 >
-  <IndexContent />
+  <article>
+    <div class="prose">
+      <div class="title">
+        <hr />
+      </div>
+      <Content />
+    </div>
+  </article>
 </Layout>

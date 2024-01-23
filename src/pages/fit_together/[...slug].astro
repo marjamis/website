@@ -1,6 +1,8 @@
 ---
+import Layout from "../../layouts/Base.astro";
+
 import { type CollectionEntry, getCollection } from "astro:content";
-import Base from "../../layouts/Base.astro";
+
 import Resources from "../../components/Resources.astro";
 import Index from "../../components/PageIndexList.astro";
 
@@ -23,8 +25,8 @@ const pages = await getCollection("fit_together", ({ id, slug }) => {
 });
 ---
 
-<Base {...post.data}>
+<Layout {...post.data}>
   <Content />
   <Index pages={pages} />
   <Resources resources={post.data.resources} />
-</Base>
+</Layout>
