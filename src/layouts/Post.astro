@@ -6,8 +6,7 @@ import type { CollectionEntry } from "astro:content";
 
 type Props = CollectionEntry<"posts">["data"];
 
-const { title, description, publishedDate, updatedDate, heroImage } =
-  Astro.props;
+const { title, publishedDate, updatedDate, heroImage } = Astro.props;
 ---
 
 <Layout title={title} heroImage={heroImage}>
