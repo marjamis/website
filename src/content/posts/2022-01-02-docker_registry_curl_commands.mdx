@@ -1,0 +1,26 @@
+---
+title: How to get docker registry/repository information with curl
+description: Ever had to get an image manifest for a docker image in a repository before or other information from the registry directly? I know I have. Here's how you can achieve this with curl.
+publishedDate: 2022-01-02 19:47:14 +1100
+heroImage: "/blog-placeholder-2.jpg"
+
+tags:
+  - docker
+  - example
+---
+
+Ever had to get an image manifest for a docker image in a repository before or other information from the registry directly? I know I have. Here's how you can achieve this with curl.
+
+To access this type of information from the Docker Hub registry you can use:
+
+import GitHubGist from "../../components/GitHubGist.astro";
+
+<GitHubGist id="fe812a8657b714efb48b16204801d9cf" file="docker_registry.sh" />
+
+How about from ECR? Boy have I!
+
+<GitHubGist id="fe812a8657b714efb48b16204801d9cf" file="ecr_registry.sh" />
+
+And there you go, an easy way to use curl to authenticate to a compatible docker registry and retrieve data for an images manifest and the tags associated with a repository. No fuss, no muss.
+
+For more information about what other data is available via this method, try having a look at the [Docker Registry API reference](https://docs.docker.com/registry/spec/api/).

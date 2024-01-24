@@ -1,0 +1,21 @@
+---
+import "../styles/global.css";
+
+const { resources } = Astro.props;
+---
+
+{
+  resources && (
+    <>
+      <h4>Resources</h4>
+      <ul>
+        {resources.map((resource) => (
+          <li>
+            <a href={resource.link}>{resource.title}</a> -{" "}
+            {resource.description}
+          </li>
+        ))}
+      </ul>
+    </>
+  )
+}

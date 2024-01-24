@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Base.astro";
+
+import { SITE_TITLE } from "../consts";
+import { Content } from "../../README.md";
+---
+
+<Layout title={SITE_TITLE} heroImage="/blog-placeholder-about.jpg">
+  <article>
+    <div class="prose">
+      <div class="title">
+        <hr />
+      </div>
+      <Content />
+    </div>
+  </article>
+</Layout>

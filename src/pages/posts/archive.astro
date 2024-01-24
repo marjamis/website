@@ -1,0 +1,35 @@
+---
+import Layout from "../../layouts/PostIndex.astro";
+
+import { getCollection } from "astro:content";
+import FormattedDate from "../../components/FormattedDate.astro";
+
+const posts = (await getCollection("posts")).sort(
+  (a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf()
+);
+---
+
+<Layout title="Posts Archive">
+  <section>
+    <ul>
+      {
+        posts.map((post) => (
+          <li>
+            <a href={`/posts/${post.slug}/`}>
+              <img width={720} height={360} src={post.data.heroImage} alt="" />
+              <h4 class="title">{post.data.title}</h4>
+            </a>
+            <div class="date">
+              <FormattedDate date={post.data.publishedDate} />
+              {post.data.updatedDate && (
+                <div class="last-updated-on">
+                  Last updated on <FormattedDate date={post.data.updatedDate} />
+                </div>
+              )}
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Layout>

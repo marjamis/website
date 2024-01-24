@@ -1,0 +1,13 @@
+---
+interface Props {
+  id: string;
+  file: string;
+}
+
+const { id, file } = Astro.props;
+---
+
+<script
+  is:inline
+  src=`https://gist.github.com/${id}.js?file=${file}`
+></script>

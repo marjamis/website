@@ -1,0 +1,54 @@
+---
+import Layout from "../../layouts/PostIndex.astro";
+
+import { getCollection } from "astro:content";
+import FormattedDate from "../../components/FormattedDate.astro";
+
+const all_posts = (await getCollection("posts")).sort(
+  (a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf()
+);
+const recent_posts = all_posts.slice(0, 5);
+const tags = [...new Set(all_posts.map((post) => post.data.tags).flat())];
+---
+
+<Layout
+  title="Most Recent Posts"
+  rssFeedURL="/posts/rss.xml"
+  headlinePost={recent_posts[0]}
+>
+  <section>
+    <ul>
+      {
+        recent_posts.slice(1).map((post) => (
+          <li>
+            <a href={`/posts/${post.slug}/`}>
+              <img width={720} height={360} src={post.data.heroImage} alt="" />
+              <h4 class="title">{post.data.title}</h4>
+            </a>
+            <div class="date">
+              <FormattedDate date={post.data.publishedDate} />
+              {post.data.updatedDate && (
+                <div class="last-updated-on">
+                  Last updated on <FormattedDate date={post.data.updatedDate} />
+                </div>
+              )}
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+
+    <h2>Posts by Tag</h2>
+    <div class="tags">
+      {
+        tags.map((tag) => (
+          <span class="tag">
+            <a href={`/posts/tags/${tag}`}>{tag}</a>
+          </span>
+        ))
+      }
+    </div>
+    <hr />
+    <a href="/posts/archive/"><em>Posts Archive</em></a>
+  </section>
+</Layout>
