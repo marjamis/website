@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Advent of Code Lessons
 ---
 
