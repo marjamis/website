@@ -8,10 +8,10 @@ import { SITE_DESCRIPTION } from "../consts";
 interface Props {
   title: string;
   heroImage: string;
-  rssFeed: string;
+  rssFeedURL?: string;
 }
 
-const { title, heroImage, rssFeed } = Astro.props;
+const { title, heroImage, rssFeedURL } = Astro.props;
 ---
 
 <!doctype html>
@@ -65,7 +65,7 @@ const { title, heroImage, rssFeed } = Astro.props;
           </div>
         )
       }
-      <h1>{title} { rssFeed && ( <a href="test" target="_blank">
+      <h1>{title} { rssFeedURL && ( <a href={rssFeedURL} target="_blank">
         <span class="sr-only">RSS Feed of Posts</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"

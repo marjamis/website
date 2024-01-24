@@ -1,13 +1,16 @@
 ---
 import Layout from "./Base.astro";
-import FormattedDate from "../components/FormattedDate.astro";
 
 import type { CollectionEntry } from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
 
-type Props = CollectionEntry<"posts">["data"];
+interface Props {
+  title: string;
+  rssFeedURL?: string;
+  headlinePost?: CollectionEntry<"posts">;
+}
 
-const { title, description, publishedDate, updatedDate, heroImage } =
-  Astro.props;
+const { title, rssFeedURL, headlinePost } = Astro.props;
 ---
 
 <style is:global>
@@ -63,19 +66,32 @@ const { title, description, publishedDate, updatedDate, heroImage } =
   }
 </style>
 
-<Layout title={title} heroImage={heroImage}>
+<Layout title={title} rssFeedURL={rssFeedURL}>
   <div class="prose">
     <div class="title">
       {
-        publishedDate && (
-          <div class="date">
-            <FormattedDate date={publishedDate} />
-            {updatedDate && (
-              <div class="last-updated-on">
-                Last updated on <FormattedDate date={updatedDate} />
-              </div>
-            )}
-          </div>
+        headlinePost?.data.heroImage && (
+          <>
+            <a href={`/posts/${headlinePost.slug}/`}>
+              <div class="hero-image" />
+              <img
+                width={1020}
+                height={510}
+                src={headlinePost.data.heroImage}
+                alt=""
+              />
+              <h4 class="title">{headlinePost.data.title}</h4>
+            </a>
+            <div class="date">
+              <FormattedDate date={headlinePost.data.publishedDate} />
+              {headlinePost.data.updatedDate && (
+                <div class="last-updated-on">
+                  Last updated on{" "}
+                  <FormattedDate date={headlinePost.data.updatedDate} />
+                </div>
+              )}
+            </div>
+          </>
         )
       }
       <hr />
