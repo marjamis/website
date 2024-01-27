@@ -20,24 +20,24 @@ My current breakdown is:
 
 ## Application
 
-- [Programming Concepts](./fit_together/programming-concepts/)
-- [Programming](./fit_together/programming/) - language specific information. Primarily for go and python with a bit of javascript in the mix
-- [Code Management](./fit_together/code-management/)
+- [Programming Concepts](/fit_together/programming-concepts/)
+- [Programming](/fit_together/programming/) - language specific information. Primarily for go and python with a bit of javascript in the mix
+- [Code Management](/fit_together/code-management/)
 
 ## Infrastructure
 
-- [Containers](./fit_together/containers/) - both the linux side (cgroups, namespaces, docker, etc) and orchestartors (primarily ECS and EKS/Kubernetes)
-- [Cloud](./fit_together/cloud) - Mainly AWS but GCP is bound to make a showing
-- [Observability](./fit_together/observability/)
+- [Containers](/fit_together/containers/) - both the linux side (cgroups, namespaces, docker, etc) and orchestartors (primarily ECS and EKS/Kubernetes)
+- [Cloud](/fit_together/cloud) - Mainly AWS but GCP is bound to make a showing
+- [Observability](/fit_together/observability/)
 
 ## Philosophies and their implementations
 
-- [DevOps](./fit_together/devops/) - this include practices, like CI/CD, and specific technologies
-- [SRE](./fit_together/sre/) practices
+- [DevOps](/fit_together/devops/) - this include practices, like CI/CD, and specific technologies
+- [SRE](/fit_together/sre/) practices
 
 ## Hearts and minds
 
-- [Technology Leadership and Change](./fit_together/tech-leadership-change/)
-- [Growth and Mental Health](./fit_together/growth-mental-health/) - this is important but easily overlooked and is worthwhile to check-in with yourself every so often
+- [Technology Leadership and Change](/fit_together/tech-leadership-change/)
+- [Growth and Mental Health](/fit_together/growth-mental-health/) - this is important but easily overlooked and is worthwhile to check-in with yourself every so often
 
 **Note:** I haven't listed security anywhere as it should be throughout but this thinking may change. Let's see how we go...

@@ -18,7 +18,7 @@ This means the specification defines a format to commit messages in order for it
 
 Here's a look at the specifications format:
 
-```text
+```plaintext
 <type>[optional scope]: <description>
 
 [optional body]

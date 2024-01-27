@@ -8,7 +8,9 @@ const all_posts = (await getCollection("posts")).sort(
   (a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf()
 );
 const recent_posts = all_posts.slice(0, 5);
-const tags = [...new Set(all_posts.map((post) => post.data.tags).flat())];
+const tags = [
+  ...new Set(all_posts.map((post) => post.data.tags).flat()),
+].sort();
 ---
 
 <Layout

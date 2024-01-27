@@ -14,7 +14,7 @@ title: Bind
 
 - Edit the /etc/named.conf file and add an ACL to a trusted list of instances, this will need to be updated on changes to IP's or additions of secondaries. An example of this ACL is:
 
-```bind
+```plaintext
   acl "trusted" {
         172.31.7.46; #IP on this machine
         172.31.33.14; #Secondary DNS Servers IP
@@ -24,20 +24,20 @@ title: Bind
 
 - Add into/create a directive for allow-query and list the above ACL or potentially add the any; directive if anyone should be able to access this DNS server though generally this should be locked to a specific subnet for internal communication only and not made public. An example of this configuration with both the ACL and allow any query:
 
-```bind
+```plaintext
   allow-query     { trusted; any; };
 ```
 
 - Configure the listen-on directive to set what ports the DNS Service listens on. An example of this:
 
-```bind
+```plaintext
   listen-on port 53 { 127.0.0.1; 172.31.7.46; };
   //listen-on-v6 port 53 { ::1; }; # This is commented out as this DNS server isn't configured to listen on IPV6 addresses.
 ```
 
 - At the bottom of this global configuration add an include for a secondary configuration file. Example:
 
-```bind
+```plaintext
   include "/etc/named/named.conf.local";
 ```
 
@@ -47,7 +47,7 @@ title: Bind
 
 - In a existing/new configuration file a Primary's configuration, create the listing of the forward and reverse zones you're creating. A sample of this configuration file is:
 
-```bind
+```plaintext
   zone "test.marjamis.example.com" {
         type master; # Specifies this DNS Server is the Primary Authoritative for the zone
         file "/etc/named/zones/db.test.marjamis.example.com"; # Location of the file zone db
@@ -67,7 +67,7 @@ chmod 755 /etc/named
 
 - Now we need to create the db's for the above listed forward/reverse zones. Each will need a basic configuration similar to the below which configures the basic requirements of a zone though there are plenty of other configuration. The base of each of these files is:
 
-```bind
+```plaintext
   $TTL 86400 #
   @       IN      SOA     <ns> <email> ( # @ will substitute the set or generated $ORIGIN, ns is the primary name server for this zone and email is for the email address of who's responsible for this zone. **NOTE:** the @ in an email address is substituted for a dot in the configuration file.
               3         ; Serial # Identifier to BIND on whether to use the new settings. Must be higher than the previous version on reload to take effect.
@@ -79,7 +79,7 @@ chmod 755 /etc/named
 
 - Once the basics are in place you can now add the required DNS Resource Records(RR's) as needed. Look at the documentation for specifics but the general format is:
 
-```bind
+```plaintext
   <URL> IN A <ipv4 address> # A
   <URL> IN AAAA <ipv6 address> # AAAA
   <URL> IN CNAME www.google.com. # CNAME
@@ -93,13 +93,13 @@ chmod 755 /etc/named
 
 - Once the configurations are made, you can check the syntax for the named.conf\* file/s that we made with:
 
-```bind
+```plaintext
 named-checkconf
 ```
 
 - Then check each zone DB file is correct with:
 
-```bind
+```plaintext
 named-checkzone <zone> <location of db file>
 ```
 
@@ -110,14 +110,14 @@ named-checkzone <zone> <location of db file>
 - Install BIND on a second machine
 - Edit the /etc/named.conf on the Primary and configure the option allow-transfer to have the IP of the secondary DNS server. Such as:
 
-```bind
+```plaintext
 allow-transfer { 172.31.33.14; };
 ```
 
 - Edit the /etc/named.conf file on the Secondary and configure the same base ACL's, listen-on and options configurations as mentioned above for a primary with any required differences. Also add the additional include for the the additional configuration file.
 - Open this included configuration file and add in the zones that we've created on the primary but instead of being masters they will be listed as slaves. An example of this configuration is:
 
-```bind
+```plaintext
 zone "test.marjamis.example.com" {
     type slave;
     file "slaves/test.marjamis.example.com";
@@ -163,7 +163,7 @@ zone "31.172.in-addr.arpa" {
 
 - Add a new section, such as:
 
-```bind
+```plaintext
   zone "new" {
     type forward;
     forwarders { <ip>; <ip>; };
