@@ -5,7 +5,7 @@ const { pages } = Astro.props;
 ---
 
 {
-  pages && (
+  (pages.length > 0) && (
     <>
       <h4>Pages</h4>
       <ul>

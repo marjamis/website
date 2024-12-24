@@ -2,7 +2,7 @@
 title: Using Conventional Commits to write better commit messages
 description: Commit messages are important as they should outline what was changed in that commit and potentially more importantly why it was done.
 publishedDate: 2022-04-29 19:52:40 +1100
-heroImage: "/blog-placeholder-3.jpg"
+heroImage: "https://images.pexels.com/photos/11035539/pexels-photo-11035539.jpeg"
 
 tags:
   - code-management
