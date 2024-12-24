@@ -1,0 +1,30 @@
+---
+import Layout from "../../layouts/Base.astro";
+import Content from "../../content/documentation/index.mdx";
+
+import { type CollectionEntry, getCollection } from "astro:content";
+
+const pages = await getCollection("documentation", ({slug}) => {
+  return slug !== 'index';
+});
+---
+
+<Layout
+  title="Documentation"
+  heroImage="/blog-placeholder-about.jpg"
+>
+  <article>
+    <div class="prose">
+      <div class="title">
+        <hr />
+      </div>
+      <Content />
+      <h2>Links</h2>
+      {pages.map((page) => (
+        <li>
+        <a href={`/documentation/${page.slug}/`}>{page.data.title}</a>
+        </li>
+      ))}
+    </div>
+  </article>
+</Layout>

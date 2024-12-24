@@ -2,7 +2,7 @@
 title: Navigating the AWS Cost Explorer (GetCostAndUsage) API with the AWS CLI
 description: The AWS Cost Explorer API is great for getting information about your AWS spend and what's is causing that spend.
 publishedDate: 2023-10-26 13:38:29 +1100
-heroImage: "/blog-placeholder-3.jpg"
+heroImage: "/aws-logo.png"
 
 tags:
   - aws
@@ -52,7 +52,7 @@ aws ce get-cost-and-usage \
 --group-by Type=DIMENSION,Key=REGION Type=DIMENSION,Key=SERVICE
 ```
 
-Keep in mind with the amount of data data is being provided it will likely be paginated, but with the CLI this is just a matter of capturing the next-page-token value and reruning the command with this token. Of course, this is just for demonstartion purposes and would highly suggest using another method than bash if you're getting into this amount of data. Such as with python:
+Keep in mind with the amount of data data is being provided it will likely be paginated, but with the CLI this is just a matter of capturing the next-page-token value and rerunning the command with this token. Of course, this is just for demonstration purposes and would highly suggest using another method than bash if you're getting into this amount of data. Such as with python:
 
 ```python
 import boto3

@@ -27,7 +27,22 @@ const fit_together = defineCollection({
 	}),
 });
 
+const documentation = defineCollection({
+	type: 'content',
+	// Type-check frontmatter using a schema
+	schema: z.object({
+		title: z.string(),
+		heroImage: z.string().optional(),
+		resources: z.object({
+			title: z.string(),
+			description: z.string().optional(),
+			link: z.string().optional(),
+		}).array().optional(),
+	}),
+});
+
 export const collections = {
 	posts: posts,
 	fit_together: fit_together,
+	documentation: documentation,
 };

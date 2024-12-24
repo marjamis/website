@@ -2,14 +2,14 @@
 title: The basics of LUKS
 description: The basics of LUKS
 publishedDate: 2022-09-24 16:15:43 +1000
-heroImage: "/blog-placeholder-5.jpg"
+heroImage: "https://p0.pxfuel.com/preview/695/58/414/hacker-cyber-code-angrfiff.jpg" 
 
 tags:
   - example
   - linux
 ---
 
-I recently had a bit of an encrypted data scare where I somehow locked myself out of my LUKS encrypted data volume and nearly lost all my data. Yikes. Thankfully I don't have anything that imporatant but it would've still been a bit of a hassle to loose. That scare, and the subsequent steps to recover, made me think I should revisit my 10+ year old encryption process and update it a bit to add a few more key verification steps than I've had in the past. Let me walk you through my general implementation.
+I recently had a bit of an encrypted data scare where I somehow locked myself out of my LUKS encrypted data volume and nearly lost all my data. Yikes. Thankfully I don't have anything that important but it would've still been a bit of a hassle to loose. That scare, and the subsequent steps to recover, made me think I should revisit my 10+ year old encryption process and update it a bit to add a few more key verification steps than I've had in the past. Let me walk you through my general implementation.
 
 The first step is the creation of a volume that I can encrypt with LUKS. In my case I wanted something that acted like a disk while not actually being a physical disk. This was for two reasons, one I don't have anywhere near enough data to require even the smallest of storage devices, and the other is that I wanted it to be a single file that contained all my data which I could then easily copied and backed up where ever I needed to, such as to other physical disks, or object stores, like S3 and Google Drive.
 
@@ -47,9 +47,9 @@ sudo cryptsetup open test_encryption_file encrypted_data_volume
 sudo cryptsetup open --key-file <location_of_key_file> test_encryption_file encrypted_data_volume
 ```
 
-Once I have my volume open, and verified I can open it with both the passphrase and the key, I still need a file system on it to be able to add my files. When you open the volume it creates a psuedo device with **device mapper (dm)** allowing it to be treated as if it was a physical disk and "maps" it as a psuedo device under /dev/mapper with the name specified with the `cryptsetup open`.
+Once I have my volume open, and verified I can open it with both the passphrase and the key, I still need a file system on it to be able to add my files. When you open the volume it creates a pseudo device with **device mapper (dm)** allowing it to be treated as if it was a physical disk and "maps" it as a pseudo device under /dev/mapper with the name specified with the `cryptsetup open`.
 
-Using this newly created device I can now create a file system on it with the normal Linux file system commands. Generally my filesystem of choice is ext4, as it's a stable general purpose file system, and is generally compatable on all Linux distributions without any additional setup. For example to create the file system and mount it I run:
+Using this newly created device I can now create a file system on it with the normal Linux file system commands. Generally my filesystem of choice is ext4, as it's a stable general purpose file system, and is generally compatible on all Linux distributions without any additional setup. For example to create the file system and mount it I run:
 
 ```bash
 sudo mke2fs -t ext4 /dev/mapper/encrypted_data_volume
@@ -75,7 +75,7 @@ There are many additional configurations that can be used with LUKS that I haven
 - Auto-mounting the disk with the use of /etc/fstab and /etc/crypttab
 - Using scripts to mount the encrypted data volumes
 - Backing up the header files of the encrypted data volumes in case of corruption (I may come back to edit this post with that information)
-- Full disk encryption, i.e. encrypting full physical disks for the OS' and data. This is extremely common in the IT world as requirement for employees and is often accomplished relatively seemless during installation of your OS. When attempting this yourself, I would recommend following your Linux distribution documentation for these steps but essentially the general steps are what are listed above but instead of being a loopback file its using cryptsetup against the physical disk used for booting the OS. With some additional steps to ensure your bootloader, usually grub, has the information and tools to open an encrypted device.
+- Full disk encryption, i.e. encrypting full physical disks for the OS' and data. This is extremely common in the IT world as requirement for employees and is often accomplished relatively seamless during installation of your OS. When attempting this yourself, I would recommend following your Linux distribution documentation for these steps but essentially the general steps are what are listed above but instead of being a loopback file its using cryptsetup against the physical disk used for booting the OS. With some additional steps to ensure your bootloader, usually grub, has the information and tools to open an encrypted device.
 - Plus I'm sure many others
 
 To learn more about LUKS, [Arch Linux](https://archlinux.org/) has a [great wiki](https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system) to help explore this more. While it is meant specifically for Arch, my distro of choice, there is plenty of useful information about the process that could help with most distributions.
